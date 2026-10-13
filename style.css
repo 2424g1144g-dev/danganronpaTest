@@ -16,7 +16,7 @@ body {
     z-index: 300;
 }
 .icon-src {
-    clip-path: polygon(0px 0px, 150px 0px, 110px 100px, 30px 140px);
+    clip-path: polygon(0px 0px, 150px 0px, 110px 100px, 35px 140px);
     position: relative;
     left: 40px;
     top: 115px;

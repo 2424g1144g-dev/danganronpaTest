@@ -16,19 +16,19 @@ body {
     z-index: 300;
 }
 .icon-src {
-    clip-path: polygon(0px 0px, 150px 0px, 110px 110px, 40px 170px);
+    clip-path: polygon(0px 0px, 150px 0px, 110px 100px, 30px 140px);
     position: relative;
-    left: 30px;
-    top: 100px;
+    left: 40px;
+    top: 115px;
     width: 120px;
     z-index: 500;
+    rotate: -5deg;
 }
 .icon-BG {
     position: relative;
-    left: 80px;
-    width: 50px;
-    height: 80px;
-    perspective: 1000;
+    left: 70px;
+    width: 70px;
+    height: 100px;
     transform: rotate(200deg);
     rotate: 30deg;
     opacity: 0.5;

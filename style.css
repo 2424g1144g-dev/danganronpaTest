@@ -15,11 +15,19 @@ body {
     position: absolute;
     z-index: 300;
 }
+.icon-src {
+    position: relative;
+    z-index: 500;
+}
 .icon-BG {
-    width: 100px;
-    height: 300px;
+    position: relative;
+    left: 80px;
+    width: 50px;
+    height: 80px;
+    perspective: 1000;
+    transform: rotate(200deg);
     rotate: 30deg;
-    filter: brightness(3.0);
-    opacity: 0.3;
-    background-color: rgb(111, 181, 255);
+    opacity: 0.5;
+    background: rgb(128 183 255);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }

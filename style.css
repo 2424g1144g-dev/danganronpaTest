@@ -10,3 +10,16 @@ body {
     font-family: "UI";
     src: url("assets/fonts/Oshidashi-M-Gothic.otf");
 }
+
+.icon {
+    position: absolute;
+    z-index: 300;
+}
+.icon-BG {
+    width: 100px;
+    height: 300px;
+    rotate: 30deg;
+    filter: brightness(3.0);
+    opacity: 0.3;
+    background-color: rgb(111, 181, 255);
+}

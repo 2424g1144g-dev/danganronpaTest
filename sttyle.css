@@ -1,0 +1,12 @@
+body {
+    color: white;
+    font-family: "UI";
+    background: black;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "UI";
+    src: url("assets/fonts/Oshidashi-M-Gothic.otf");
+}

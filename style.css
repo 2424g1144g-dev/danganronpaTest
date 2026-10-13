@@ -32,7 +32,6 @@ body {
     transform: rotate(200deg);
     rotate: 30deg;
     opacity: 0.5;
-    overflow: hidden;
     background: rgb(128 183 255);
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }

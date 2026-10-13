@@ -35,3 +35,21 @@ body {
     background: rgb(128 183 255);
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }
+.bar-flame {
+    background-color: #000000;
+    padding: 3px;
+    border: 2px solid #222;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.6);
+    position: relative;
+    overflow: hidden;
+}
+#hp-fill {
+    background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 50%, #00d2ff 100%);
+    background-size: 200% 100%;
+    animation: gradientMove 3s ease infinite;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#sp-fill {
+    background: linear-gradient(90deg, #ffe000 0%, #799f0c 100%);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

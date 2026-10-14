@@ -35,13 +35,19 @@ body {
     background: rgb(128 183 255);
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }
+#bar-parent {
+    rotate: -23deg;
+}
 .bar-flame {
     background-color: #000000;
-    padding: 3px;
+    padding: 1.5px;
+    left: 53px;
+    top: -25px;
     border: 2px solid #222;
-    box-shadow: 4px 4px 0px rgba(0,0,0,0.6);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.6);
     position: relative;
     overflow: hidden;
+    z-index: 700;
 }
 #hp-fill {
     background: rgb(117, 255, 177);

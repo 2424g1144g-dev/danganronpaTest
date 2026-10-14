@@ -62,6 +62,7 @@ body {
 }
 #hp-fillBG {
     position: relative;
+    top: -5px;
     background: rgb(17, 134, 155);
     height: 5px;
     z-index: 1;
@@ -75,6 +76,7 @@ body {
 }
 #sp-fillBG {
     position: relative;
+    top: -5px;
     background: rgb(155, 153, 20);
     height: 5px;
     z-index: 1;

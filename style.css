@@ -60,6 +60,7 @@ body {
     height: 5px;
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
+    transform: skewX(-40deg);
 }
 #hp-fillBG {
     position: relative;
@@ -67,6 +68,7 @@ body {
     background: rgb(17, 134, 155);
     height: 5px;
     z-index: 1;
+    transform: skewX(-40deg);
 }
 #sp-fill {
     background: rgb(255, 253, 120);
@@ -74,6 +76,7 @@ body {
     height: 5px;
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
+    transform: skewX(-40deg);
 }
 #sp-fillBG {
     position: relative;
@@ -81,6 +84,7 @@ body {
     background: rgb(155, 153, 20);
     height: 5px;
     z-index: 1;
+    transform: skewX(-40deg);
 }
 
 .hp-display {

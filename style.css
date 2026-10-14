@@ -1,7 +1,7 @@
 body {
     color: black;
     font-family: "UI";
-    background: white;
+    background: rgb(149, 142, 142);
     margin: 0;
     padding: 0;
 }
@@ -25,7 +25,6 @@ body {
     z-index: 500;
     rotate: 5deg;
     filter: drop-shadow(10px 0 0 rgba(0, 0, 0, 1));
-    mix-blend-mode: screen;
 }
 .icon-BG {
     position: relative;
@@ -37,6 +36,7 @@ body {
     opacity: 0.5;
     background: rgb(128 183 255);
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    mix-blend-mode: screen;
 }
 #bar-parent {
     position: relative;

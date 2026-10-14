@@ -53,13 +53,20 @@ body {
     z-index: 700;
 }
 #hp-fill {
-    background: rgb(117, 255, 177);
+    background: rgb(117, 234, 255);
     background-size: 200% 100%;
     height: 5px;
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
 }
 #sp-fill {
     background: rgb(255, 253, 120);
     height: 5px;
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
+#sp-fillBG {
+    background: rgb(155, 153, 20);
+    height: 5px;
+    z-index: 1;
 }

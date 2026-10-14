@@ -44,12 +44,13 @@ body {
     overflow: hidden;
 }
 #hp-fill {
-    background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 50%, #00d2ff 100%);
+    background: rgb(117, 255, 177);
     background-size: 200% 100%;
-    animation: gradientMove 3s ease infinite;
+    height: 5px;
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #sp-fill {
-    background: linear-gradient(90deg, #ffe000 0%, #799f0c 100%);
+    background: rgb(255, 253, 120);
+    height: 5px;
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

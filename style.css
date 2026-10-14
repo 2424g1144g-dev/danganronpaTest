@@ -36,13 +36,15 @@ body {
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }
 #bar-parent {
+    position: relative;
     rotate: -23deg;
+    z-index: 1000;
 }
 .bar-flame {
     background-color: #000000;
     padding: 1.5px;
     left: 53px;
-    top: -25px;
+    top: -5px;
     border: 2px solid #222;
     box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.6);
     position: relative;

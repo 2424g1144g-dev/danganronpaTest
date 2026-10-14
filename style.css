@@ -82,3 +82,46 @@ body {
     height: 5px;
     z-index: 1;
 }
+
+#hp-display {
+    display: flex;
+    position: relative;
+    left: 165px;
+    top: -85px;
+    color: white;
+    width: 40px;
+    border-radius: 50%;
+    height: 20px;
+    white-space: nowrap;
+    font-size: 24px;
+    letter-spacing: 0;
+    -webkit-text-stroke: #000000 4px;
+    paint-order: stroke fill;
+    background: #000000;
+    line-height: 0.9;
+    justify-content: center;
+    z-index: 1000;
+    transform: skewX(-20deg);
+    scale: 1.1;
+}
+#mp-display {
+    display: flex;
+    position: relative;
+    left: 165px;
+    top: -85px;
+    color: white;
+    width: 40px;
+    border-radius: 50%;
+    height: 20px;
+    white-space: nowrap;
+    font-size: 24px;
+    letter-spacing: 0;
+    -webkit-text-stroke: #000000 4px;
+    paint-order: stroke fill;
+    background: #000000;
+    line-height: 0.9;
+    justify-content: center;
+    z-index: 1000;
+    transform: skewX(-20deg);
+    scale: 1.1;
+}

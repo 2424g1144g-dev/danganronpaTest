@@ -25,12 +25,7 @@ body {
     z-index: 500;
     rotate: 5deg;
     filter: drop-shadow(10px 0 0 rgba(0, 0, 0, 1));
-}
-.light-wrapper {
-    display: inline-block;
-    filter: 
-        drop-shadow(0 0 10px rgba(0, 162, 255, 0.8))   /* 芯に近い強い光 */
-        drop-shadow(0 0 30px rgba(0, 162, 255, 0.5));  /* 遠くまで広がる淡い光 */
+    mix-blend-mode: screen;
 }
 .icon-BG {
     position: relative;
@@ -138,4 +133,4 @@ body {
     z-index: 1000;
     transform: skewX(-20deg);
     scale: 1.1;
-} 
+}

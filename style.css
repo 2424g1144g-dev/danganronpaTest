@@ -83,7 +83,7 @@ body {
     z-index: 1;
 }
 
-#hp-display {
+.hp-display {
     display: flex;
     position: relative;
     left: 165px;
@@ -104,7 +104,7 @@ body {
     transform: skewX(-20deg);
     scale: 1.1;
 }
-#mp-display {
+.mp-display {
     display: flex;
     position: relative;
     left: 165px;

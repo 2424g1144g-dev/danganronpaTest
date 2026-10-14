@@ -5,6 +5,16 @@ body {
     margin: 0;
     padding: 0;
 }
+#background-layer {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    transition: opacity 1s linear;
+}
 
 @font-face {
     font-family: "UI";

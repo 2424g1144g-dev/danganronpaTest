@@ -217,3 +217,14 @@ body {
     rotate: -5deg;
     transform: skewX(-30deg);
 }
+.subword {
+    position: relative;
+    font-family: "UI";
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke: #13134F 2px;
+    paint-order: stroke fill;
+    rotate: -5deg;
+    transform: skewX(-30deg);
+}

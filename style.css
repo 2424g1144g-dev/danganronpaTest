@@ -211,9 +211,9 @@ body {
     position: absolute;
     font-family: "alphabetUI";
     font-weight: 1000;
-    letter-spacing: -3px;
+    letter-spacing: -1px;
     color: white;
     z-index: 2;
-    rotate: 10deg;
-    transform: skewX(10deg);
+    rotate: -5deg;
+    transform: skewX(-30deg);
 }

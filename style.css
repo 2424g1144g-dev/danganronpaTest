@@ -162,7 +162,15 @@ body {
     rotate: 30deg;
 }
 #moon-command {
-    position: absoltute;
+    position: absolute;
+    left: -20px;
+    top: 70px;
     font-family: "alphabetUI";
+    font-size: 40px;
+    font-weight: 1000;
+    letter-spacing: -3px;
     color: #1248FF;
+    z-index: 700;
+    rotate: -35deg;
+    transform: skewX(10deg);
 }

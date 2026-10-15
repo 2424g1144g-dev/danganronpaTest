@@ -20,6 +20,10 @@ body {
     font-family: "UI";
     src: url("assets/fonts/Oshidashi-M-Gothic.otf");
 }
+@font-face {
+    font-family: "alphabetUI";
+    src: url("assets/fonts/Roboto-Italic-VariableFont_wdthwght.ttf");
+}
 
 .icon {
     position: absolute;
@@ -156,4 +160,9 @@ body {
     border-radius: 50%;
     box-shadow: -40px 0 0 0 #1248FF;
     rotate: 30deg;
+}
+#moon-command {
+    position: absoltute;
+    font-family: "alphabetUI";
+    color: #1248FF;
 }

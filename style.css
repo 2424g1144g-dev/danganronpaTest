@@ -184,13 +184,12 @@ body {
 }
 #command-BG {
     position: absolute;
-    left: 0;
+    left: -100px;
     top: 0;
-    width: 20vh;
+    width: 40vh;
     height: 120vh;
     background: #86c8ff68;
-    rotate: 30deg;
-    z-index: 100;
+    rotate: -20deg;
 }
 #command-circle {
     color: #138DFF;

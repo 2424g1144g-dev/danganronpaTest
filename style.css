@@ -178,6 +178,7 @@ body {
     position: absolute;
     left: 300px;
     top: 550px;
+    z-index: 1000;
 }
 #command-circle {
     color: #138DFF;

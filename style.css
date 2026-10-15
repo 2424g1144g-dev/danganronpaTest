@@ -174,7 +174,7 @@ body {
     rotate: -35deg;
     transform: skewX(10deg);
 }
-#circle-parent {
+#command-parent {
     position: absolute;
     left: 300px;
     top: 550px;

@@ -207,3 +207,13 @@ body {
     align-items: center;
     scale: 0.8;
 }
+.keyword {
+    position: absolute;
+    font-family: "alphabetUI";
+    font-weight: 1000;
+    letter-spacing: -3px;
+    color: white;
+    z-index: 2;
+    rotate: 10deg;
+    transform: skewX(10deg);
+}

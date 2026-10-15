@@ -176,8 +176,13 @@ body {
 }
 #command-circle {
     position: absolute;
+    left: 230px;
+    top: 105px;
     color: #138DFF;
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
+    background: #128DEF;
+    border-radius: 50%;
     z-index: 1000;
+    rotate: -30deg;
 }

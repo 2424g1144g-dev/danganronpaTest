@@ -148,9 +148,12 @@ body {
 
 #moon {
     position: absolute;
+    left: 100px;
+    top: 370px;
     width: 300px;
     height: 300px;
-    background-color: transparent; /* 本体は透明にする */
+    background-color: transparent;
     border-radius: 50%;
-    box-shadow: -30px -10px 0 0 #1248FF; 
+    box-shadow: -40px 0 0 0 #1248FF;
+    rotate: 30deg;
 }

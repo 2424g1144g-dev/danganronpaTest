@@ -174,10 +174,12 @@ body {
     rotate: -35deg;
     transform: skewX(10deg);
 }
-#command-circle {
+#circle-parent {
     position: absolute;
-    left: 230px;
-    top: 105px;
+    left: 300px;
+    top: 550px;
+}
+#command-circle {
     color: #138DFF;
     width: 130px;
     height: 130px;

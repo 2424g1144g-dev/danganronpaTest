@@ -68,7 +68,7 @@ body {
 }
 #hp-fill {
     position: relative;
-    background: rgb(117, 234, 255);
+    background: rgb(68, 228, 232);
     background-size: 200% 100%;
     height: 5px;
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -143,4 +143,14 @@ body {
     z-index: 1000;
     transform: skewX(-20deg);
     scale: 1.1;
+}
+
+
+#moon {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: transparent; /* 本体は透明にする */
+    border-radius: 50%;
+    box-shadow: -30px -10px 0 0 #1248FF; 
 }

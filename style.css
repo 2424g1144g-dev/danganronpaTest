@@ -4,6 +4,7 @@ body {
     background: rgb(149, 142, 142);
     margin: 0;
     padding: 0;
+    touch-action: none;
 }
 #background-layer {
     position: fixed;

@@ -12,7 +12,7 @@ let currentState = "command";
 const enemies = ["古市秀治"];
 let currentEnemyIndex = 0;
 window.addEventListener("keydown", (event) => {
-  if (currentState != command) return;
+  if (currentState != "command") return;
   if (event.key === "ArrowLeft") {
     // 左が押されたとき：0より大きければ（左にまだ敵がいれば）1減らす
     if (currentEnemyIndex > 0) {

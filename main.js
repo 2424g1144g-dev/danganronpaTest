@@ -11,11 +11,11 @@ window.addEventListener("wheel", (e) => {
   const enemies = ["古市秀治"];
   let cEI = 0;
   window.addEventListener("keydown", (event) => {
-    if (currentState != command) return;
+    if (currentState != "command") return;
     if (event.key === "ArrowLeft") {
       // 左が押されたとき：0より大きければ（左にまだ敵がいれば）1減らす
-      if (currentEnemyIndex > 0) {
-        currentEnemyIndex--;
+      if (cEI > 0) {
+        cEI--;
         updateSelectedEnemyCSS(); // CSSのクラスを付け替える関数
       } else {
         // 一番左（indexが0）のときは、これ以上左に行けない（制限）
@@ -24,8 +24,8 @@ window.addEventListener("wheel", (e) => {
     }
     if (event.key === "ArrowRight") {
       // 右が押されたとき：配列の最大長さより小さければ（右にまだ敵がいれば）1増やす
-      if (currentEnemyIndex < enemies.length - 1) {
-        currentEnemyIndex++;
+      if (cEI < enemies.length - 1) {
+        cEI++;
         updateSelectedEnemyCSS();
       } else {
         // 一番右のときは、これ以上右に行けない（制限）
@@ -36,7 +36,7 @@ window.addEventListener("wheel", (e) => {
   function updateSelectedEnemyCSS() {
     const enemyElements = document.querySelectorAll('.enemy');
     enemyElements.forEach((enemyElement, index) => {
-      if (index === currentEnemyIndex) {
+      if (index === cEI) {
         enemyElement.classList.add('selected');
       } else {
         enemyElement.classList.remove('selected');

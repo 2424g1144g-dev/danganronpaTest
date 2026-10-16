@@ -33,6 +33,13 @@ window.addEventListener("wheel", (e) => {
       }
     }
   });
-function {
-  
-}
+  function updateSelectedEnemyCSS() {
+    const enemyElements = document.querySelectorAll('.enemy');
+    enemyElements.forEach((enemyElement, index) => {
+      if (index === currentEnemyIndex) {
+        enemyElement.classList.add('selected');
+      } else {
+        enemyElement.classList.remove('selected');
+      }  
+    });
+  }

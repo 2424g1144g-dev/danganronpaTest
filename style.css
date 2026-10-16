@@ -277,6 +277,10 @@ body {
     background: rgba(255, 168, 29, 0.5);
     border: 4px solid black;
     z-index: 100;
+    opacity: 0;
+}
+.enemy .reticle.selected {
+    opacity: 1;
 }
 .enemy .reticle-wave {
     position: relative;

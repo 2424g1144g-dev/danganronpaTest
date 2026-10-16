@@ -281,7 +281,7 @@ body {
     z-index: 100;
     opacity: 0;
 }
-.enemy .reticle.selected {
+.enemy.selected .reticle{
     opacity: 1;
 }
 .enemy .reticle-wave {

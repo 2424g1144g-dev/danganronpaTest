@@ -28,6 +28,10 @@ body {
     font-family: "alphabetUI";
     src: url("assets/fonts/Roboto-Italic-VariableFont_wdthwght.ttf");
 }
+@font-face {
+    font-family: "neko";
+    src: url("assets/fonts/NekoSpoon.ttf");
+}
 
 .icon {
     position: absolute;
@@ -301,8 +305,10 @@ body {
     border-radius: 10px;
     overflow: hidden;
     z-index: 1;
-    font-size: 30px;
+    font-family: "neko";
+    font-size: 24px;
     color: white;
+    justify-content: center;
 }
 #enemy-name::before {
     content: "";

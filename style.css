@@ -293,7 +293,6 @@ body {
     z-index: 1500;
 }
 #enemy-name {
-    display: flex;
     position: relative;
     width: 300px;
     height: 40px;
@@ -302,7 +301,6 @@ body {
     overflow: hidden;
     z-index: 1;
     font-size: 30px;
-    justify-content: center;
 }
 #enemy-name-BG {
     position: relative;
@@ -311,7 +309,7 @@ body {
     width: 300px;
     height: 50px;
     background: #590001;
-    z-index: 1;
+    z-index: 2;
     rotate: -11deg;
     transform: skew(60deg, 7deg);
 }

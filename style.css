@@ -307,5 +307,5 @@ body {
     height: 40px;
     background: #590001;
     z-index: 2;
-    rotate: 20deg;
+    rotate: -10deg;
 }

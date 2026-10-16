@@ -43,5 +43,9 @@ function updateSelectedEnemyCSS() {
       enemyElement.classList.remove('selected');
     }  
   });
+  const nameDisplay = document.getElementById('enemy-name');
+  if (nameDisplay && enemies[currentEnemyIndex]) {
+    nameDisplay.textContent = enemies[currentEnemyIndex];
+  }
 }
 updateSelectedEnemyCSS();

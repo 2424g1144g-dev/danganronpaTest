@@ -253,6 +253,17 @@ body {
 
 
 .enemy {
-    position: absolute;
+    position: relative;
+    display: inline-block;
     z-index: 50;
+}
+.enemy .reticle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(2.0) rotate(45deg);
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 168, 29, 0.5);
+    border: 2px solid black;
 }

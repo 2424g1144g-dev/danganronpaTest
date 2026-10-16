@@ -253,9 +253,5 @@ body {
 
 .enemy {
     position: absolute;
-    top: 25vh;
-    left: 50vh;
-    width: 500px;
-    height: 500px;
     z-index: 50;
 }

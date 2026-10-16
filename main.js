@@ -10,7 +10,7 @@ window.addEventListener("keydown", (e) => {
   
 let currentState = "command";
 const enemies = ["古市秀治"];
-let cEI = 0;
+let currentEnemyIndex = 0;
 window.addEventListener("keydown", (event) => {
   if (currentState != command) return;
   if (event.key === "ArrowLeft") {

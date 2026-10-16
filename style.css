@@ -298,6 +298,7 @@ body {
 }
 
 #enemy-name {
+    display: flex;
     position: relative;
     width: 300px;
     height: 40px;
@@ -306,9 +307,10 @@ body {
     overflow: hidden;
     z-index: 1;
     font-family: "neko";
-    font-size: 24px;
+    font-size: 20px;
     color: white;
     justify-content: center;
+    align-items: center;
 }
 #enemy-name::before {
     content: "";

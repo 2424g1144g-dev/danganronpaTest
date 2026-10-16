@@ -256,6 +256,11 @@ body {
     filter: drop-shadow(-10px 0 0 #1248FF);
     z-index: 900;
     transform: skewX(-5deg);
+    animation: wait 3s linear infinite alternate-reverse;
+}
+@keyframes wait {
+    from {scale: (1.0, 1.0);}
+    to { scale: (1.0, 0.85);}
 }
 
 

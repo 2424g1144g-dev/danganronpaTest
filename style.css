@@ -255,15 +255,12 @@ body {
 }
 
 
-.enemy {
-    position: relative;
-    z-index: 50;
-}
+
 .enemy .reticle {
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-60%) scale(1.0) rotate(45deg) skewX(-10deg) skewY(-10deg);
+    transform: translate(-50%,-50%) scale(1.0) rotate(45deg) skewX(-10deg) skewY(-10deg);
     width: 50px;
     height: 50px;
     background: rgba(255, 168, 29, 0.5);
@@ -275,7 +272,7 @@ body {
     opacity: 1;
 }
 .enemy .reticle-wave {
-    position: relative;
+    position: absolute;
     left: -5px;
     top: -5px;
     width: 50px;

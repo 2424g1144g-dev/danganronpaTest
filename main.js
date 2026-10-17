@@ -38,12 +38,13 @@ function updateSelectedEnemyCSS() {
   const enemyElements = document.querySelectorAll('.enemy');
   const waveOnce = document.querySelectorAll('.reticle-wave-once');
   enemyElements.forEach((enemyElement, index) => {
+    const currentWaveOnce = waveOnce[index];
     if (index === currentEnemyIndex) {
       enemyElement.classList.add('selected');
-      waveOnce.classList.add("waveonce");
+      if (currentWaveOnce) currentWaveOnce.classList.add("waveonce");
     } else {
       enemyElement.classList.remove('selected');
-      waveOnce.classList.remove("waveonce");
+      if (currentWaveOnce) currentWaveOnce.classList.remove("waveonce");
     }  
   });
   const nameDisplay = document.getElementById('enemy-name');

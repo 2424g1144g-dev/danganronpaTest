@@ -255,12 +255,12 @@ body {
     height: 500px;
     filter: drop-shadow(-10px 0 0 #1248FF);
     z-index: 900;
-    transform: skewX(-5deg);
-    animation: wait 3s linear infinite alternate-reverse;
+    transform-origin: bottom;
+    animation: wait 2s linear infinite alternate-reverse;
 }
 @keyframes wait {
-    from {scale: (1.0, 1.0);}
-    to { scale: (1.0, 0.85);}
+    from {transform: skewX(-5deg) scale(1.0,1.0);}
+    to { transform: skewX(-5deg) scale(1.0,0.97);}
 }
 
 
@@ -283,8 +283,8 @@ body {
 }
 .enemy .reticle-wave {
     position: absolute;
-    left: -5px;
-    top: -5px;
+    left: -4px;
+    top: -4px;
     width: 50px;
     height: 50px;
     background: transparent;

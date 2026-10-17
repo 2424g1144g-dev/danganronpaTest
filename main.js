@@ -40,10 +40,10 @@ function updateSelectedEnemyCSS() {
   enemyElements.forEach((enemyElement, index) => {
     if (index === currentEnemyIndex) {
       enemyElement.classList.add('selected');
-      waveOnce.classList.add("wave-once");
+      waveOnce.classList.add("waveonce");
     } else {
       enemyElement.classList.remove('selected');
-      waveOnce.classList.remove("wave-once");
+      waveOnce.classList.remove("waveonce");
     }  
   });
   const nameDisplay = document.getElementById('enemy-name');

@@ -36,15 +36,11 @@ window.addEventListener("keydown", (event) => {
 });
 function updateSelectedEnemyCSS() {
   const enemyElements = document.querySelectorAll('.enemy');
-  const waveOnce = document.querySelectorAll('.reticle-wave-once');
   enemyElements.forEach((enemyElement, index) => {
-    const currentWaveOnce = waveOnce[index];
     if (index === currentEnemyIndex) {
       enemyElement.classList.add('selected');
-      if (currentWaveOnce) currentWaveOnce.classList.add("waveonce");
     } else {
       enemyElement.classList.remove('selected');
-      if (currentWaveOnce) currentWaveOnce.classList.remove("waveonce");
     }  
   });
   const nameDisplay = document.getElementById('enemy-name');

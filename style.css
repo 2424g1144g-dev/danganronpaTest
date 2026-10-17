@@ -292,29 +292,6 @@ body {
     z-index: 90;
     animation: wave 1s linear infinite;
 }
-.enemy .reticle-wave-once {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%) scale(1.0) rotate(45deg) skewX(-10deg) skewY(-10deg);
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border: 15px solid #E10203;
-    z-index: 100;
-    opacity: 0;
-}
-@keyframes wave {
-    from {opacity: 1; scale: 1.0;}
-    to {opacity: 0; scale: 1.5;}
-}
-@keyframes waveonce {
-    from {opacity: 1; scale: 1.0;}
-    to {opacity: 1; scale: 5.0;}
-}
-.waveonce {
-    animation: waveonce 0.7s ease-out forwards;
-}
 #enemy-name-parent {
     position: absolute;
     left: 30px;

@@ -4,13 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="assets/BG/gym.png" as="image" crossorigin="anonymous">
-    <link rel="preload" href="assets/characters/mitsuhiro/Mitsuhiro_behind.png" as="image" crossorigin="anonymous">
-    <link rel="preload" href="assets/characters/mitsuhiro/Mitsuhiro_Normal.png" as="image" crossorigin="anonymous">
-    <link rel="preload" href="assets/characters/enemies/FakeFuruichi_Normal.png" as="image" crossorigin="anonymous">
-    <link rel="preload" href="assets/icon/Keizo_Normal.png" as="image" crossorigin="anonymous">
-    <link rel="preload" href="assets/icon/Mitsuhiro_Normal.png" as="image" crossorigin="anonymous">
-    <link rel="preload" href="assets/icon/Ryuji_Normal.png" as="image" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
@@ -135,8 +128,21 @@
 
 
 
-    <div aria-hidden="true">
+    <div class="image-preload-container" aria-hidden="true">
+        <!-- 背景 -->
+        <img src="assets/BG/gym.png" loading="eager">
+    
+        <!-- アイコン類 -->
+        <img src="assets/icon/Keizo_Normal.png" loading="eager">
+        <img src="assets/icon/Ryuji_Normal.png" loading="eager">
+        <img src="assets/icon/Mitsuhiro_Normal.png" loading="eager">
+    
+        <!-- 立ち絵・敵 -->
+        <img src="assets/characters/mitsuhiro/Mitsuhiro_Normal.png" loading="eager">
+        <img src="assets/characters/mitsuhiro/Mitsuhiro_behind.png" loading="eager">
+        <img src="assets/characters/enemies/FakeFuruichi_Normal.png" loading="eager">
     </div>
+    
 
 
     <script src="main.js"></script>

@@ -262,6 +262,10 @@ body {
     from {transform: skewX(-5deg) scale(1.0,1.0);}
     to { transform: skewX(-5deg) scale(1.0,0.97);}
 }
+@keyframes wait {
+    from {transform: translate(-50%, -50%) scale(1.0,1.0);}
+    to { transform: translate(-50%, -50%) scale(1.0,0.97);}
+}
 
 
 

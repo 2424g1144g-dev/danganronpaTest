@@ -315,7 +315,7 @@ body {
     z-index: 800;
     scale: 0.8;
 }
-#hp-fill {
+#enemy-hp-fill {
     position: relative;
     background: rgb(68, 228, 232);
     background-size: 200% 100%;

@@ -269,6 +269,7 @@ body {
 
 
 
+
 .enemy .reticle {
     position: absolute;
     top: 50%;
@@ -300,6 +301,19 @@ body {
     from {opacity: 1; scale: 1.0;}
     to {opacity: 0; scale: 1.5;}
 }
+.enemy-hp-bar {
+    background-color: #000000;
+    padding: 1.5px;
+    width: 120px;
+    height: 6px;
+    top: -5px;
+    border: 2px solid #222;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+    z-index: 700;
+}
+
 #enemy-name-parent {
     position: absolute;
     left: 30px;

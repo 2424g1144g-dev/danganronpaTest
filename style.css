@@ -157,7 +157,10 @@ body {
     scale: 1.1;
 }
 
-
+command.show {
+    position: relative;
+    transform: translate(0,0);
+}
 #moon {
     position: absolute;
     left: 100px;

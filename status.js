@@ -37,7 +37,7 @@ window.updateCharacterHp = function(characterId, currentHp) {
 }
 window.updateCharacterSp = function(characterId, currentSp) {
     // 0未満にならないように調整
-    const hp = Math.max(0, currentSp);
+    const sp = Math.max(0, currentSp);
     // 数値を3桁の文字列に分解（例: 75 -> "075"）
     const spString = String(sp).padStart(3, '0');
     // 対象のキャラクターのアイコン要素を取得

@@ -156,6 +156,9 @@ body {
     transform: skewX(-20deg);
     scale: 1.1;
 }
+.digit.is-gray {
+    color: #888888;
+}
 
 #moon-joint {
     position: relative;

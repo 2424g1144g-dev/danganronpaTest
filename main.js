@@ -7,7 +7,8 @@ window.addEventListener("keydown", (e) => {
   }
 })
 
-  
+
+
 let currentState = "command";
 const enemies = ["古市秀治"];
 let currentEnemyIndex = 0;
@@ -49,3 +50,13 @@ function updateSelectedEnemyCSS() {
   }
 }
 updateSelectedEnemyCSS();
+
+
+//キー入力
+addEventListener("keydown", (event) => {
+  if(currentState != "command") return;
+  if (event.key === "s") {
+    currentState = "attack";
+    
+  }
+})

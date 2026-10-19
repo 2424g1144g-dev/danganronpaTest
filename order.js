@@ -12,6 +12,7 @@ function getActionOrder() {
         const bSpd = b.spd + Math.floor(Math.random() * 10);
         return bSpd - aSpd;
     });
+    return aliveCharacters; 
 }
 
 let turnOrder = []; // 今のターンの行動順リスト

@@ -67,5 +67,5 @@ window.updateCharacterSp = function(characterId, currentSp) {
 // === 使い方（テスト用） ===
 // ダメージを食らって「mitsuhiro」のHPが 45 になった場合、以下のように呼び出します。
 // 自動的に百の位が「0」になり、灰色（is-gray）になります。
-window.updateCharacterHp('mitsuhiro-icon', 2);
-window.updateCharacterSp('mitsuhiro-icon', 8);
+window.updateCharacterHp('mitsuhiro-icon', mitHp);
+window.updateCharacterSp('mitsuhiro-icon', mitSp);

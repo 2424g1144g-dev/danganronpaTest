@@ -30,12 +30,16 @@ window.updateCharacterHp = function(characterId, currentHp) {
 
     // --- ここが本題の処理 ---
     // 百の位が "0" の場合は灰色クラスを付与、それ以外は削除
-    if (el100) {
-        if (hpString[0] === '0') {
-            el100.classList.add('is-gray');
+    if (hp < 100) {
+        el100.classList.add('is-gray');
+        if (hp < 10) {
+            el10.classList.add('is-gray');
         } else {
-            el100.classList.remove('is-gray');
+            el10.classList.remove('is-gray');
         }
+    } else {
+        el100.classList.remove('is-gray');
+        el10.classList.remove('is-gray');
     }
 }
 

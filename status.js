@@ -10,25 +10,46 @@ let keiHp = 308, keiMaxHp = 308, keiSp = 124, keiMaxSp = 124, keiAtk = 130, keiD
 window.updateCharacterHp = function(characterId, currentHp) {
     // 0未満にならないように調整
     const hp = Math.max(0, currentHp);
-
     // 数値を3桁の文字列に分解（例: 75 -> "075"）
     const hpString = String(hp).padStart(3, '0');
-    
     // 対象のキャラクターのアイコン要素を取得
     const charIcon = document.getElementById(characterId);
     if (!charIcon) return;
-
-    // 各桁の要素を取得
     const el100 = charIcon.querySelector('.hp-100');
     const el10 = charIcon.querySelector('.hp-10');
     const el1 = charIcon.querySelector('.hp-1');
-
     // それぞれの桁に数値を代入
     if (el100) el100.textContent = hpString[0];
     if (el10)  el10.textContent  = hpString[1];
     if (el1)   el1.textContent   = hpString[2];
-
-    // --- ここが本題の処理 ---
+    // 百の位が "0" の場合は灰色クラスを付与、それ以外は削除
+    if (hp < 100) {
+        el100.classList.add('is-gray');
+        if (hp < 10) {
+            el10.classList.add('is-gray');
+        } else {
+            el10.classList.remove('is-gray');
+        }
+    } else {
+        el100.classList.remove('is-gray');
+        el10.classList.remove('is-gray');
+    }
+}
+window.updateCharacterSp = function(characterId, currentSp) {
+    // 0未満にならないように調整
+    const hp = Math.max(0, currentSp);
+    // 数値を3桁の文字列に分解（例: 75 -> "075"）
+    const spString = String(sp).padStart(3, '0');
+    // 対象のキャラクターのアイコン要素を取得
+    const charIcon = document.getElementById(characterId);
+    if (!charIcon) return;
+    const el100 = charIcon.querySelector('.sp-100');
+    const el10 = charIcon.querySelector('.sp-10');
+    const el1 = charIcon.querySelector('.sp-1');
+    // それぞれの桁に数値を代入
+    if (el100) el100.textContent = spString[0];
+    if (el10)  el10.textContent  = spString[1];
+    if (el1)   el1.textContent   = spString[2];
     // 百の位が "0" の場合は灰色クラスを付与、それ以外は削除
     if (hp < 100) {
         el100.classList.add('is-gray');
@@ -46,4 +67,5 @@ window.updateCharacterHp = function(characterId, currentHp) {
 // === 使い方（テスト用） ===
 // ダメージを食らって「mitsuhiro」のHPが 45 になった場合、以下のように呼び出します。
 // 自動的に百の位が「0」になり、灰色（is-gray）になります。
-window.updateCharacterHp('mitsuhiro-icon', 2); 
+window.updateCharacterHp('mitsuhiro-icon', 2);
+window.updateCharacterSp('mitsuhiro-icon', 8);

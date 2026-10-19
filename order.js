@@ -76,4 +76,5 @@ function checkHpById(id) {
     if (id === "keizo-icon") return ryuHp;
     return 0;
 }
+getActionOrder();
 startTurn();

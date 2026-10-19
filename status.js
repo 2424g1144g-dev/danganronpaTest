@@ -51,9 +51,9 @@ window.updateCharacterSp = function(characterId, currentSp) {
     if (el10)  el10.textContent  = spString[1];
     if (el1)   el1.textContent   = spString[2];
     // 百の位が "0" の場合は灰色クラスを付与、それ以外は削除
-    if (hp < 100) {
+    if (sp < 100) {
         el100.classList.add('is-gray');
-        if (hp < 10) {
+        if (sp < 10) {
             el10.classList.add('is-gray');
         } else {
             el10.classList.remove('is-gray');

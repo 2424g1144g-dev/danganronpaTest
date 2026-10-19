@@ -5,6 +5,7 @@ function getActionOrder() {
         { name: "Keizo", id: "keizo-icon", spd: keiSpd, hp: keiHp }
         // ここに敵（Enemy）のデータも同じように追加できます
     ];
+    const aliveCharacters = characters.filter(char => char.hp > 0);
     aliveCharacters.sort((a, b) => {
         // 素早さに 0〜9 のランダム値を足して比較する
         const aSpd = a.spd + Math.floor(Math.random() * 10);

@@ -306,7 +306,7 @@ body {
     padding: 1.5px;
     width: 120px;
     height: 6px;
-    top: -80px;
+    top: -95px;
     left: 680px;
     border: 2px solid #222;
     position: relative;
@@ -326,15 +326,15 @@ body {
 .enemy-hp-wave {
     background: transparent;
     padding: 1.5px;
-    width: 120px;
+    width: 85px;
     height: 6px;
     top: -80px;
-    left: 680px;
+    left: 695px;
     border: 4px solid rgba(250, 17, 17, 0.7);
     position: relative;
     overflow: hidden;
     z-index: 90;
-    scale: 0.8;
+    scale: 1.0;
     animation: wave 1s ease-out infinite;
 }
 

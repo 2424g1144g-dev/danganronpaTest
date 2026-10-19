@@ -157,9 +157,14 @@ body {
     scale: 1.1;
 }
 
-command.show {
+#moon-joint {
     position: relative;
+    transform: translate(200px, 0);
+    opacity: 0;
+}
+#moon-joint.show {
     transform: translate(0,0);
+    opacity: 1;
 }
 #moon {
     position: absolute;

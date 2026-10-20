@@ -59,22 +59,31 @@ function executeNextAction() {
     console.log(`${attacker.name} の行動です！（素早さ: ${attacker.spd}）`);
 
     // ここで実際の「たたかう」「スキル」などの行動処理を行います
-    // 例: プレイヤーならコマンドボタンを表示して入力を待つ、敵なら自動で攻撃など
-    
-    // 【重要】行動やアニメーションが終わったタイミングで、
-    // 次の人に進めるために以下の2行を実行します。
-    // (今回はテスト用にすぐ次の人に回します)
-    setTimeout(() => {
-        currentActionIndex++;
-        executeNextAction();
-    }, 1500);
+    if (attacker.id === "mitsuhiro-icon" || attacker.id === "ryuji-icon", attacker.id === "keizo-icon") {
+        const img = document.getElementById("command-img");
+        if (attacker.id === "mitsuhiro-icon") img.src = "assets/characters/mitsuhiro/Mitsuhiro_behind.png";
+        showCommandMenu();
+    } else {
+        console.log("敵の行動");
+        setTimeout(() => {
+            currentActionIndex++;
+            executeNextAction();
+        }, 1500);
+    }
+}
+
+function showCommandMenu(attacker) {
+    const moon = document.getElementById("moon-joint");
+    const command = document.getElementById("command-parent");
+    moon.classList.add("show");
+    command.classList.add("show");
 }
 
 // 補助：IDから現在の最新HPを返す関数（簡易版）
 function checkHpById(id) {
     if (id === "mitsuhiro-icon") return mitHp;
     if (id === "ryuji-icon") return ryuHp;
-    if (id === "keizo-icon") return ryuHp;
+    if (id === "keizo-icon") return keiHp;
     return 0;
 }
 

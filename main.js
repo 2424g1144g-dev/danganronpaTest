@@ -50,12 +50,3 @@ function updateSelectedEnemyCSS() {
   }
 }
 updateSelectedEnemyCSS();
-
-
-//キー入力
-addEventListener("keydown", (event) => {
-  if(currentState != "command") return;
-  if (event.key === "s") {
-    currentState = "attack";
-  }
-})

@@ -78,7 +78,7 @@ function executeNextAction() {
 const moon = document.getElementById("moon-joint");
 const command = document.getElementById("command-parent");
 const img = document.getElementById("command-img");
-const reticle = querySelector(".reticle-container");
+const reticle = document.querySelector(".reticle-container");
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 function showCommandMenu(attacker) {
     moon.classList.add("show");

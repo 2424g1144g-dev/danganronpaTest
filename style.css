@@ -7,7 +7,6 @@ body {
     touch-action: none;
     overflow-y: hidden;
     overflow-x: hidden;
-    pointer-events: none;
 }
 #background-layer {
     position: fixed;

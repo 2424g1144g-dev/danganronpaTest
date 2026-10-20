@@ -292,6 +292,12 @@ body {
 
 
 
+.enemy .reticle-container {
+    opacity: 0;
+}
+.enemy .reticle-container.selected {
+    opacity: 1;
+}
 .enemy .reticle {
     position: absolute;
     top: 50%;
@@ -412,6 +418,7 @@ body {
   opacity: 0;
   pointer-events: none; /* クリックを邪魔しない */
   transform-origin: center;
+  z-index: 500;
 }
 
 /* 1太刀目：上から右下へ斬り下ろす */

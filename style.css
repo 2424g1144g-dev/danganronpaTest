@@ -275,10 +275,10 @@ body {
     z-index: 900;
     transform-origin: bottom;
     opacity: 0;
-    animation: wait 2s linear infinite alternate-reverse;
 }
 #command-img.show {
     opacity: 1;
+    animation: wait 2s linear infinite alternate-reverse;
 }
 @keyframes wait {
     from {transform: skewX(-5deg) scale(1.0,1.0);}

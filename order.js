@@ -59,7 +59,7 @@ function executeNextAction() {
     console.log(`${attacker.name} の行動です！（素早さ: ${attacker.spd}）`);
 
     // ここで実際の「たたかう」「スキル」などの行動処理を行います
-    if (attacker.id === "mitsuhiro-icon" || attacker.id === "ryuji-icon", attacker.id === "keizo-icon") {
+    if (attacker.id === "mitsuhiro-icon" || attacker.id === "ryuji-icon" || attacker.id === "keizo-icon") {
         const img = document.getElementById("command-img");
         if (attacker.id === "mitsuhiro-icon") img.src = "assets/characters/mitsuhiro/Mitsuhiro_behind.png";
         if (attacker.id === "ryuji-icon") img.src = "assets/characters/ryuji/Ryuji_behind.png";

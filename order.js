@@ -105,9 +105,9 @@ addEventListener("keydown", async (event) => {
       command.classList.remove("show");
       img.classList.remove("show");
     }
-    if (attacker.id === "mitsuhiro") {
+    if (attacker.id === "mitsuhiro-icon") {
         console.log("塚越の通常こうげき");
-    } else if (attacker.id === "mitsuhiro") {
+    } else if (attacker.id === "keizo-icon") {
         slashEffect.classList.add("slash-down");
         await sleep(300);
         slashEffect.classList.remove("slash-down");

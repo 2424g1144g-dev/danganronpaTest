@@ -78,7 +78,7 @@ function executeNextAction() {
 const moon = document.getElementById("moon-joint");
 const command = document.getElementById("command-parent");
 const img = document.getElementById("command-img");
-const reticle = document.querySelector(".reticle-container");
+const reticle = document.querySelectorAll(".reticle-container");
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 function showCommandMenu(attacker) {
     moon.classList.add("show");
@@ -106,6 +106,7 @@ addEventListener("keydown", async (event) => {
       moon.classList.remove("show");
       command.classList.remove("show");
       img.classList.remove("show");
+      reticle.classList.remove("selected");
     }
     if (attacker.id === "mitsuhiro-icon") {
         console.log("塚越の通常こうげき");

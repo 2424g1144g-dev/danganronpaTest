@@ -74,14 +74,16 @@ function executeNextAction() {
     }
 }
 
+
+const moon = document.getElementById("moon-joint");
+const command = document.getElementById("command-parent");
+const img = document.getElementById("command-img");
 function showCommandMenu(attacker) {
-    const moon = document.getElementById("moon-joint");
-    const command = document.getElementById("command-parent");
-    const img = document.getElementById("command-img");
     moon.classList.add("show");
     command.classList.add("show");
     img.classList.add("show");
-
+    currentState = "command";
+    //ここからキー入力
 }
 
 // 補助：IDから現在の最新HPを返す関数（簡易版）
@@ -93,3 +95,18 @@ function checkHpById(id) {
 }
 
 startTurn();
+
+
+//キー入力
+addEventListener("keydown", (event) => {
+    if(currentState != "command") return;
+    const attacker = turnOrder[currentActionIndex];
+    if (event.key === "s") {
+      currentState = "attack";
+      if(attacker.id === "keizo-icon") {
+        moon.classList.remove("show");
+        command.classList.remove("show");
+        img.classList.remove("show");
+      }
+    }
+  })

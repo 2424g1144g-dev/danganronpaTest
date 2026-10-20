@@ -57,6 +57,5 @@ addEventListener("keydown", (event) => {
   if(currentState != "command") return;
   if (event.key === "s") {
     currentState = "attack";
-    
   }
 })

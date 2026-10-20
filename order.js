@@ -94,9 +94,6 @@ function checkHpById(id) {
     return 0;
 }
 
-startTurn();
-
-
 //キー入力
 addEventListener("keydown", (event) => {
     if(currentState != "command") return;
@@ -107,4 +104,6 @@ addEventListener("keydown", (event) => {
       command.classList.remove("show");
       img.classList.remove("show");
     }
-  })
+})
+
+startTurn();

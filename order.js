@@ -78,6 +78,7 @@ function executeNextAction() {
 const moon = document.getElementById("moon-joint");
 const command = document.getElementById("command-parent");
 const img = document.getElementById("command-img");
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 function showCommandMenu(attacker) {
     moon.classList.add("show");
     command.classList.add("show");
@@ -95,7 +96,7 @@ function checkHpById(id) {
 }
 
 //キー入力
-addEventListener("keydown", (event) => {
+addEventListener("keydown", async (event) => {
     if(currentState != "command") return;
     const attacker = turnOrder[currentActionIndex];
     if (event.key === "s") {
@@ -103,6 +104,15 @@ addEventListener("keydown", (event) => {
       moon.classList.remove("show");
       command.classList.remove("show");
       img.classList.remove("show");
+    }
+    if (attacker.id === "mitsuhiro") {
+        console.log("塚越の通常こうげき");
+    } else if (attacker.id === "mitsuhiro") {
+        slashEffect.classList.add("slash-down");
+        await sleep(300);
+        slashEffect.classList.remove("slash-down");
+        await sleep(100);
+        slashEffect.classList.add("slash-up");
     }
 })
 

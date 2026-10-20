@@ -394,3 +394,63 @@ body {
     rotate: -11deg;
     transform: skew(60deg, 7deg);
 }
+
+
+
+
+
+
+/* エフェクト */
+.slash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 6px;
+  background: #fff; 
+  box-shadow: 0 0 10px #00f, 0 0 20px #fff; /* 青いオーラ */
+  opacity: 0;
+  pointer-events: none; /* クリックを邪魔しない */
+  transform-origin: center;
+}
+
+/* 1太刀目：上から右下へ斬り下ろす */
+.slash.slash-down {
+  animation: slashDownAnim 0.2s ease-out forwards;
+}
+
+/* 2太刀目：下から右上へ斬り上げる */
+.slash.slash-up {
+  animation: slashUpAnim 0.2s ease-out forwards;
+}
+
+/* アニメーション定義 */
+@keyframes slashDownAnim {
+  0% {
+    transform: translate(-50%, -50%) rotate(-30deg) scaleX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-30deg) scaleX(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -10%) rotate(-30deg) scaleX(1);
+    opacity: 0; /* 消える */
+  }
+}
+
+@keyframes slashUpAnim {
+  0% {
+    transform: translate(-50%, -50%) rotate(30deg) scaleX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(30deg) scaleX(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -90%) rotate(30deg) scaleX(1);
+    opacity: 0; /* 消える */
+  }
+}

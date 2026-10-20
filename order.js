@@ -103,10 +103,8 @@ addEventListener("keydown", (event) => {
     const attacker = turnOrder[currentActionIndex];
     if (event.key === "s") {
       currentState = "attack";
-      if(attacker.id === "keizo-icon") {
-        moon.classList.remove("show");
-        command.classList.remove("show");
-        img.classList.remove("show");
-      }
+      moon.classList.remove("show");
+      command.classList.remove("show");
+      img.classList.remove("show");
     }
   })

@@ -1,7 +1,6 @@
 // グローバル変数の宣言
 let turnOrder = [];
 let currentActionIndex = 0;
-let currentState = "";
 
 // DOM要素の取得
 const moon = document.getElementById("moon-joint");

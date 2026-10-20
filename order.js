@@ -77,8 +77,11 @@ function executeNextAction() {
 function showCommandMenu(attacker) {
     const moon = document.getElementById("moon-joint");
     const command = document.getElementById("command-parent");
+    const img = document.getElementById("command-img");
     moon.classList.add("show");
     command.classList.add("show");
+    img.classList.add("show");
+
 }
 
 // 補助：IDから現在の最新HPを返す関数（簡易版）

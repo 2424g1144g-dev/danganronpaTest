@@ -99,6 +99,7 @@ function checkHpById(id) {
 addEventListener("keydown", async (event) => {
     if(currentState != "command") return;
     const attacker = turnOrder[currentActionIndex];
+    const slashEffect = document.getElementById("slash-effect");
     if (event.key === "s") {
       currentState = "attack";
       moon.classList.remove("show");

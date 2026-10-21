@@ -414,56 +414,122 @@ body {
 
 /* エフェクト */
 .slash {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200px;
-  height: 6px;
-  background: #fff; 
-  box-shadow: 0 0 10px #00f, 0 0 20px #fff; /* 青いオーラ */
-  opacity: 0;
-  pointer-events: none; /* クリックを邪魔しない */
-  transform-origin: center;
-  z-index: 500;
-}
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-/* 1太刀目：上から右下へ斬り下ろす */
+    width: 360px;
+    height: 120px;
+
+    z-index: 500;
+    pointer-events: none;
+    opacity: 0;
+    /* 敵画像の中心付近に表示 */
+    transform: translate(-50%, -50%);
+}
+/* 刃の共通設定 */
+.slash-blade,
+.slash-trail {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(
+        0% 48%,
+        38% 44%,
+        85% 0%,
+        66% 45%,
+        100% 50%,
+        66% 55%,
+        85% 100%,
+        38% 56%
+    );
+}
+/* 青い残像 */
+.slash-trail {
+    background: #087bff;
+    filter: drop-shadow(0 0 12px #008cff);
+    opacity: 0.9;
+}
+/* 白く輝く刃 */
+.slash-blade {
+    background: linear-gradient(
+        90deg,
+        #8beaff 0%,
+        #ffffff 35%,
+        #ffffff 65%,
+        #a7e8ff 100%
+    );
+
+    filter:
+        drop-shadow(0 0 4px #ffffff)
+        drop-shadow(0 0 12px #00aaff)
+        drop-shadow(0 0 25px #0066ff);
+}
+/* 1太刀目：上から斬り下ろす */
 .slash.slash-down {
-  animation: slashDownAnim 0.2s ease-out forwards;
+    animation: slashDownAnim 0.24s ease-out forwards;
 }
-
-/* 2太刀目：下から右上へ斬り上げる */
+/* 2太刀目：下から斬り上げる */
 .slash.slash-up {
-  animation: slashUpAnim 0.2s ease-out forwards;
+    animation: slashUpAnim 0.24s ease-out forwards;
 }
-
-/* アニメーション定義 */
+/* 斬り下ろし */
 @keyframes slashDownAnim {
-  0% {
-    transform: translate(-50%, -50%) rotate(-30deg) scaleX(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translate(-50%, -50%) rotate(-30deg) scaleX(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -10%) rotate(-30deg) scaleX(1);
-    opacity: 0; /* 消える */
-  }
+    0% {
+        opacity: 0;
+        transform:
+            translate(-70%, -85%)
+            rotate(-35deg)
+            scale(0.3);
+    }
+    20% {
+        opacity: 1;
+    }
+    65% {
+        opacity: 1;
+        transform:
+            translate(-50%, -50%)
+            rotate(-35deg)
+            scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform:
+            translate(-30%, -15%)
+            rotate(-35deg)
+            scale(1.2);
+    }
 }
-
+/* 斬り上げ */
 @keyframes slashUpAnim {
-  0% {
-    transform: translate(-50%, -50%) rotate(30deg) scaleX(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translate(-50%, -50%) rotate(30deg) scaleX(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -90%) rotate(30deg) scaleX(1);
-    opacity: 0; /* 消える */
-  }
+    0% {
+        opacity: 0;
+        transform:
+            translate(-30%, -15%)
+            rotate(35deg)
+            scale(0.3);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    65% {
+        opacity: 1;
+        transform:
+            translate(-50%, -50%)
+            rotate(35deg)
+            scale(1.1);
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(-70%, -85%)
+            rotate(35deg)
+            scale(1.2);
+    }
 }

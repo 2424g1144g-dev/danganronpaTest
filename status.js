@@ -69,3 +69,32 @@ window.updateCharacterSp = function(characterId, currentSp) {
 // 自動的に百の位が「0」になり、灰色（is-gray）になります。
 window.updateCharacterHp('mitsuhiro-icon', mitHp);
 window.updateCharacterSp('mitsuhiro-icon', mitSp);
+
+//ダメージ
+window.showDamage = function(value) {
+    const output = document.getElementById("damage-number");
+    if (!output) return;
+    // 前回のダメージ表示を消す
+    output.innerHTML = "";
+    // 数字を1桁ずつに分解
+    String(value).split("").forEach((digit, i) => {
+        const span = document.createElement("span");
+        span.className = "damage-digit";
+        span.textContent = digit;
+        // 左の桁から順番にアニメーション
+        span.style.animationDelay = `${i * 0.09}s`;
+        output.appendChild(span);
+        // 表示アニメーション開始
+        requestAnimationFrame(() => {
+            span.classList.add("show");
+        });
+    });
+    // 最後の桁が出現してから少し待って消す
+    const delay = String(value).length * 90 + 1000;
+    setTimeout(() => {
+        output.querySelectorAll(".damage-digit").forEach(digit => {
+            digit.classList.remove("show");
+            digit.classList.add("fade");
+        });
+    }, delay);
+}

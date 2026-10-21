@@ -110,11 +110,7 @@ addEventListener("keydown", async (event) => {
       if (attacker.id === "mitsuhiro-icon") {
         console.log("塚越の通常こうげき");
       } else if (attacker.id === "keizo-icon") {
-        slashEffect.classList.add("slash-down");
-        await sleep(300);
-        slashEffect.classList.remove("slash-down");
-        await sleep(100);
-        slashEffect.classList.add("slash-up");
+        window.playSlashEffect();
       }
     }
 })

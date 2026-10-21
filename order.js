@@ -107,15 +107,15 @@ addEventListener("keydown", async (event) => {
       img.classList.remove("show");
       const enemyReticle = document.querySelector(".enemy.selected");
       enemyReticle.classList.remove("selected");
-    }
-    if (attacker.id === "mitsuhiro-icon") {
+      if (attacker.id === "mitsuhiro-icon") {
         console.log("塚越の通常こうげき");
-    } else if (attacker.id === "keizo-icon") {
+      } else if (attacker.id === "keizo-icon") {
         slashEffect.classList.add("slash-down");
         await sleep(300);
         slashEffect.classList.remove("slash-down");
         await sleep(100);
         slashEffect.classList.add("slash-up");
+      }
     }
 })
 

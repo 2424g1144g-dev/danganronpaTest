@@ -394,7 +394,7 @@ body {
     font-weight: bold;
     font-style: italic;
     color: #ffffff;
-    text-shadow: 7px 7px 0 #000000;
+    text-shadow: 4px 4px 0 #000000;
     opacity: 0;
     transform: translate(-8px, 18px) scale(0.55) rotate(-12deg);
 }

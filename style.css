@@ -301,7 +301,7 @@ body {
 .enemy .enemy-hp-container {
     opacity: 0;
 }
-.enemy .enemy-hp-container.selecterd {
+.enemy .enemy-hp-container.selected {
     opacity: 1;
 }
 .enemy .reticle {

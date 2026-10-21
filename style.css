@@ -31,6 +31,10 @@ body {
     font-family: "neko";
     src: url("assets/fonts/NekoSpoon.ttf");
 }
+@font-face {
+    font-family: "damage";
+    src: url("assets/fonts/Teko-VariableFont_wght.ttf");
+}
 
 .icon {
     position: absolute;
@@ -371,6 +375,45 @@ body {
     scale: 1.0;
     animation: wave 1s ease-out infinite;
 }
+.damage-number {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    display: flex;
+    gap: 1px;
+    transform: translate(-50%, -50%);
+    z-index: 600;
+    pointer-events: none;
+    white-space: nowrap;
+}
+/* 1桁ずつの数字 */
+.damage-digit {
+    display: inline-block;
+    font-family: "damage";
+    font-size: 48px;
+    font-weight: 900;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 7px 7px 0 #000000;
+    opacity: 0;
+    transform: translate(-8px, 18px) scale(0.55) rotate(-12deg);
+}
+/* 左の桁から順番に出現 */
+.damage-digit.show {
+    animation: damageDigitPop 0.42s cubic-bezier(0.18, 0.85, 0.3, 1.35) forwards;}
+@keyframes damageDigitPop {
+    0% {opacity: 0; transform: translate(-8px, 18px) scale(0.55) rotate(-12deg);}
+    58% {opacity: 1; transform: translate(4px, -12px) scale(1.18) rotate(5deg);}
+    78% {opacity: 1; transform: translate(7px, -3px) scale(0.96) rotate(-2deg);}
+    100% {opacity: 1; transform: translate(9px, 0) scale(1) rotate(0deg);}
+}
+/* ダメージ表示が消える */
+.damage-digit.fade {
+    animation: damageFade 0.35s ease-in forwards;
+}
+@keyframes damageFade {
+    to {opacity: 0; transform: translate(24px, -30px) scale(0.9);}
+}
 
 #enemy-name-parent {
     position: absolute;
@@ -462,7 +505,6 @@ body {
         #ffffff 65%,
         #a7e8ff 100%
     );
-
     filter:
         drop-shadow(0 0 4px #ffffff)
         drop-shadow(0 0 12px #00aaff)
@@ -478,58 +520,15 @@ body {
 }
 /* 斬り下ろし */
 @keyframes slashDownAnim {
-    0% {
-        opacity: 0;
-        transform:
-            translate(-70%, -85%)
-            rotate(-35deg)
-            scale(0.3);
-    }
-    20% {
-        opacity: 1;
-    }
-    65% {
-        opacity: 1;
-        transform:
-            translate(-50%, -50%)
-            rotate(-35deg)
-            scale(1.1);
-    }
-    100% {
-        opacity: 0;
-        transform:
-            translate(-30%, -15%)
-            rotate(-35deg)
-            scale(1.2);
-    }
+    0% {opacity: 0; transform: translate(-70%, -85%) rotate(-35deg) scale(0.3);}
+    20% {opacity: 1;}
+    65% {opacity: 1; transform: translate(-50%, -50%) rotate(-35deg) scale(1.1);}
+    100% {opacity: 0; transform: translate(-30%, -15%) rotate(-35deg) scale(1.2);}
 }
 /* 斬り上げ */
 @keyframes slashUpAnim {
-    0% {
-        opacity: 0;
-        transform:
-            translate(-30%, -15%)
-            rotate(35deg)
-            scale(0.3);
-    }
-
-    20% {
-        opacity: 1;
-    }
-
-    65% {
-        opacity: 1;
-        transform:
-            translate(-50%, -50%)
-            rotate(35deg)
-            scale(1.1);
-    }
-
-    100% {
-        opacity: 0;
-        transform:
-            translate(-70%, -85%)
-            rotate(35deg)
-            scale(1.2);
-    }
+    0% {opacity: 0; transform: translate(-30%, -15%) rotate(35deg) scale(0.3);}
+    20% {opacity: 1;}
+    65% {opacity: 1; transform: translate(-50%, -50%) rotate(35deg) scale(1.1);}
+    100% {opacity: 0; transform: translate(-70%, -85%) rotate(35deg) scale(1.2);}
 }

@@ -298,6 +298,12 @@ body {
 .enemy .reticle-container.selected {
     opacity: 1;
 }
+.enemy .enemy-hp-container {
+    opacity: 0;
+}
+.enemy .enemy-hp-container.selecterd {
+    opacity: 1;
+}
 .enemy .reticle {
     position: absolute;
     top: 50%;

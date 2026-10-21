@@ -295,13 +295,13 @@ body {
 .enemy .reticle-container {
     opacity: 0;
 }
-.enemy .reticle-container.selected {
+.enemy.selected .reticle-container{
     opacity: 1;
 }
 .enemy .enemy-hp-container {
     opacity: 0;
 }
-.enemy .enemy-hp-container.selected {
+.enemy.selected .enemy-hp-container {
     opacity: 1;
 }
 .enemy .reticle {

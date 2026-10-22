@@ -554,7 +554,7 @@ body {
 .slash-effect.active .slash-arc {
   position: absolute;
   top: 40px;
-  right: 30px;
+  left: 600px;
   width: 160px;
   height: 160px;
   border-right: 12px solid #ffcc00;
@@ -584,7 +584,7 @@ body {
    ============================================== */
 .slash-effect.active .impact-ground {
   position: absolute;
-  bottom: 40px;
+  bottom: -300px;
   left: 50%;
   width: 140px;
   height: 35px;
@@ -616,7 +616,7 @@ body {
    ============================================== */
 .slash-effect.active .impact-burst {
   position: absolute;
-  bottom: 50px;
+  bottom: -260px;
   left: 50%;
   width: 40px;
   height: 80px;

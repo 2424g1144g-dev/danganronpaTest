@@ -535,7 +535,7 @@ body {
 
 /* エフェクト全体の共通設定 */
 .slash-effect {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   pointer-events: none;
@@ -552,7 +552,7 @@ body {
    1. 振り下ろし軌跡（円弧）
    ============================================== */
 .slash-effect.active .slash-arc {
-  position: absolute;
+  position: relative;
   top: 40px;
   right: 30px;
   width: 160px;
@@ -583,7 +583,7 @@ body {
    2. 地面の着地衝撃（楕円）
    ============================================== */
 .slash-effect.active .impact-ground {
-  position: absolute;
+  position: relative;
   bottom: 40px;
   left: 50%;
   width: 140px;
@@ -615,7 +615,7 @@ body {
    3. 上昇バースト（縦方向の光）
    ============================================== */
 .slash-effect.active .impact-burst {
-  position: absolute;
+  position: relative;
   bottom: 50px;
   left: 50%;
   width: 40px;

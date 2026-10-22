@@ -541,16 +541,10 @@ body {
   pointer-events: none;
   opacity: 0;
 }
-
-/* activeクラスがついたらアニメーション発動 */
 .slash-effect.active {
   z-index: 500;
   opacity: 1;
 }
-
-/* ==============================================
-   1. 振り下ろし軌跡（円弧）
-   ============================================== */
 .slash-effect.active .slash-arc {
   position: absolute;
   top: 40px;
@@ -564,7 +558,6 @@ body {
   transform-origin: center center;
   animation: slashArcAnim 0.2s ease-out forwards;
 }
-
 @keyframes slashArcAnim {
   0% {
     transform: rotate(-60deg) scale(0.6);
@@ -578,7 +571,6 @@ body {
     opacity: 0;
   }
 }
-
 /* ==============================================
    2. 地面の着地衝撃（楕円）
    ============================================== */
@@ -595,7 +587,6 @@ body {
   animation: groundAnim 0.25s ease-out 0.12s forwards;
   opacity: 0;
 }
-
 @keyframes groundAnim {
   0% {
     transform: translateX(-50%) scale(0.2);
@@ -610,7 +601,6 @@ body {
     opacity: 0;
   }
 }
-
 /* ==============================================
    3. 上昇バースト（縦方向の光）
    ============================================== */
@@ -627,7 +617,6 @@ body {
   animation: burstAnim 0.2s ease-out 0.12s forwards;
   opacity: 0;
 }
-
 @keyframes burstAnim {
   0% {
     transform: translateX(-50%) scaleY(0.3);
@@ -639,6 +628,151 @@ body {
   }
   100% {
     transform: translateX(-50%) scaleY(1.5);
+    opacity: 0;
+  }
+}
+
+/* 背景・枠組み設定 */
+.volleyball-container {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  background-color: #1a1a2e;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 8px;
+}
+
+.volleyball-effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.volleyball-effect.active {
+  opacity: 1;
+}
+
+/* ==============================================
+   1. バレーボール本体（CSSで球体を表現）
+   ============================================== */
+.volleyball-effect.active .volleyball {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  /* バレーボール風のカラーリングと立体感グラデーション */
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #3a7bd5 50%, #f5af19 100%);
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+  animation: ballFly 0.25s cubic-bezier(0.5, 0, 0.75, 0) forwards;
+}
+
+/* ボールが左上から右下のターゲットへ直線的に飛ぶアニメーション */
+@keyframes ballFly {
+  0% {
+    transform: translate(0, 0) scale(0.6) rotate(0deg);
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(240px, 160px) scale(1.1) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ==============================================
+   2. 飛翔時の残像・スピードライン
+   ============================================== */
+.volleyball-effect.active .ball-trail {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  width: 180px;
+  height: 6px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), #3a7bd5);
+  border-radius: 3px;
+  transform-origin: left center;
+  transform: rotate(33deg);
+  animation: trailAnim 0.25s ease-out forwards;
+}
+
+@keyframes trailAnim {
+  0% {
+    width: 0px;
+    opacity: 1;
+  }
+  70% {
+    width: 200px;
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ==============================================
+   3. 着弾時の衝撃波（リング）
+   ============================================== */
+.volleyball-effect.active .impact-ring {
+  position: absolute;
+  top: 160px;
+  left: 245px;
+  width: 60px;
+  height: 60px;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #f5af19;
+  animation: ringExpand 0.2s ease-out 0.22s forwards;
+  opacity: 0;
+}
+
+@keyframes ringExpand {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* ==============================================
+   4. 着弾時の閃光（インパクトスパーク）
+   ============================================== */
+.volleyball-effect.active .impact-flash {
+  position: absolute;
+  top: 160px;
+  left: 245px;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, #ffffff 0%, #f5af19 60%, transparent 100%);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #ffcc00);
+  animation: flashAnim 0.18s ease-out 0.22s forwards;
+  opacity: 0;
+}
+
+@keyframes flashAnim {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
     opacity: 0;
   }
 }

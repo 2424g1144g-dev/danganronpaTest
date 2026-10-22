@@ -19,4 +19,10 @@ window.playStampEffect = async function() {
     effect.classList.remove('active');
     void effect.offsetWidth; // リフロー発生
     effect.classList.add('active');
-  }
+}
+window.volleyballEffect = async function() {
+    const effect = document.getElementById('volleyballEffect');
+    effect.classList.remove('active');
+    void effect.offsetWidth; // リフロー発生（アニメーションリセット）
+    effect.classList.add('active');
+}

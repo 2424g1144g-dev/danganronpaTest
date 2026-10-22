@@ -115,6 +115,8 @@ addEventListener("keydown", async (event) => {
         showDamage(damage);
       } else if (attacker.id === "ryuji-icon") {
         window.volleyballEffect();
+        await sleep(200);
+        damage = window.damageValue(ryuAtk*2.0 furDef)
       } else if (attacker.id === "keizo-icon") {
         window.playSlashEffect();
         damage = window.damageValue(keiAtk*0.8, furDef);

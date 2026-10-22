@@ -120,6 +120,7 @@ addEventListener("keydown", async (event) => {
         damagePlus = window.damageValue(keiAtk*1.2, furDef) + damage;
         showDamage(damagePlus);
       }
+      executeNextAction();
     }
 })
 

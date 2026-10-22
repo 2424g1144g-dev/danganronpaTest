@@ -544,7 +544,6 @@ body {
 
 /* activeクラスがついたらアニメーション発動 */
 .slash-effect.active {
-  position: relative;
   z-index: 500;
   opacity: 1;
 }

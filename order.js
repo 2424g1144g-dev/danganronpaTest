@@ -65,6 +65,7 @@ function executeNextAction() {
         if (attacker.id === "ryuji-icon") img.src = "assets/characters/ryuji/Ryuji_behind.png";
         if (attacker.id === "keizo-icon") img.src = "assets/characters/keizo/Keizo_behind.png";
         showCommandMenu();
+        updateSelectedEnemyCSS();
     } else {
         console.log("敵の行動");
         setTimeout(() => {
@@ -121,6 +122,7 @@ addEventListener("keydown", async (event) => {
         showDamage(damagePlus);
       }
       await sleep(800);
+      currentActionIndex++;
       executeNextAction();
     }
 })

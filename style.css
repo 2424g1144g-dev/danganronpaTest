@@ -544,6 +544,7 @@ body {
 
 /* activeクラスがついたらアニメーション発動 */
 .slash-effect.active {
+  position: relative;
   z-index: 500;
   opacity: 1;
 }
@@ -552,7 +553,7 @@ body {
    1. 振り下ろし軌跡（円弧）
    ============================================== */
 .slash-effect.active .slash-arc {
-  position: relative;
+  position: absolute;
   top: 40px;
   right: 30px;
   width: 160px;

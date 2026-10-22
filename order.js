@@ -108,7 +108,7 @@ addEventListener("keydown", async (event) => {
       const enemyReticle = document.querySelector(".enemy.selected");
       enemyReticle.classList.remove("selected");
       if (attacker.id === "mitsuhiro-icon") {
-        console.log("塚越の通常こうげき");
+        window.playStampEffect();
       } else if (attacker.id === "keizo-icon") {
         window.playSlashEffect();
         damage = window.damageValue(keiAtk, furDef);

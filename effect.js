@@ -13,3 +13,10 @@ window.playSlashEffect =async function() {
     void slash.offsetWidth;
     slash.classList.add("slash-up");
 }
+window.playStampEffect = async function() {
+    const effect = document.getElementById('effect');
+    // クラスを外し、再描画を発生させてからクラスを付け直すことでアニメーションをリセット
+    effect.classList.remove('active');
+    void effect.offsetWidth; // リフロー発生
+    effect.classList.add('active');
+  }

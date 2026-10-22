@@ -12,5 +12,4 @@ window.playSlashEffect =async function() {
     slash.classList.remove("slash-down");
     void slash.offsetWidth;
     slash.classList.add("slash-up");
-    window.showDamage(217);
 }

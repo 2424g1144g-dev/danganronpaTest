@@ -1,6 +1,7 @@
 let mitHp = 327, mitMaxHp = 327, mitSp = 115, mitMaxSp = 115, mitAtk = 122, mitDef = 99, mitSpd = 34, mitDodge = 7, mitLuck = 10, mitResist = 50, mitSucceed = 50;
 let ryuHp = 269, ryuMaxHp = 269, ryuSp = 147, ryuMaxSp = 147, ryuAtk = 106, ryuDef = 113,ryuSpd = 30, ryuDodge = 5, ryuLuck = 12, ryuResist = 50, ryuSucceed = 50;
 let keiHp = 308, keiMaxHp = 308, keiSp = 124, keiMaxSp = 124, keiAtk = 130, keiDef = 102,keiSpd = 39, keiDodge = 6, keiLuck = 9,  keiResist = 50, keiSucceed = 50;
+let furDef = 37;
 
 /**
  * キャラクターのHP表示を更新する関数
@@ -71,6 +72,22 @@ window.updateCharacterHp('mitsuhiro-icon', mitHp);
 window.updateCharacterSp('mitsuhiro-icon', mitSp);
 
 //ダメージ
+window.damageValue = function(yourAtk, enemyDef) {
+    let baseDamage = yourAtk - enemyDef;
+
+    // 防御力が高すぎてダメージが0以下になるのを防ぐ (最低1ダメージにする場合)
+    if (baseDamage <= 0) {
+        baseDamage = 1; 
+    }
+    // 2. -3% から +3% のランダムな倍率を生成
+    // Math.random() は 0以上1未満 なので、
+    // (Math.random() * 0.06) で 0〜0.06 の範囲になり、
+    // そこから + 0.97 することで 0.97〜1.03 (つまり -3% 〜 +3%) になります。
+    const randomMultiplier = (Math.random() * 0.06) + 0.97;
+    // 3. ベースダメージに倍率を掛け、端数を四捨五入（または切り捨て）
+    let finalDamage = Math.round(baseDamage * randomMultiplier);
+    return finalDamage;
+}
 window.showDamage = function(value) {
     const output = document.getElementById("damage-number");
     if (!output) return;

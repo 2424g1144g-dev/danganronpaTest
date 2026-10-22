@@ -111,6 +111,7 @@ addEventListener("keydown", async (event) => {
         window.playStampEffect();
         await sleep(200);
         damage = window.damageValue(mitAtk*2.2, furDef);
+        showDamage(damage);
       } else if (attacker.id === "keizo-icon") {
         window.playSlashEffect();
         damage = window.damageValue(keiAtk*0.8, furDef);

@@ -64,7 +64,6 @@ function executeNextAction() {
         if (attacker.id === "mitsuhiro-icon") img.src = "assets/characters/mitsuhiro/Mitsuhiro_behind.png";
         if (attacker.id === "ryuji-icon") img.src = "assets/characters/ryuji/Ryuji_behind.png";
         if (attacker.id === "keizo-icon") img.src = "assets/characters/keizo/Keizo_behind.png";
-        updateCSS
         showCommandMenu();
     } else {
         console.log("敵の行動");

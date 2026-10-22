@@ -634,12 +634,15 @@ body {
 
 
 .volleyball-effect {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  opacity: 0;
-}
+    position: absolute;
+    left: 435px;
+    top: 250px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 500;
+  }
 
 .volleyball-effect.active {
   opacity: 1;

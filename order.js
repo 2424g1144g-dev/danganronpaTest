@@ -109,12 +109,14 @@ addEventListener("keydown", async (event) => {
       enemyReticle.classList.remove("selected");
       if (attacker.id === "mitsuhiro-icon") {
         window.playStampEffect();
+        await sleep(200);
+        damage = window.damageValue(mitAtk*2.2, furDef);
       } else if (attacker.id === "keizo-icon") {
         window.playSlashEffect();
-        damage = window.damageValue(keiAtk, furDef);
+        damage = window.damageValue(keiAtk*0.8, furDef);
         showDamage(damage);
         await sleep(350);
-        damagePlus = window.damageValue(keiAtk, furDef) + damage;
+        damagePlus = window.damageValue(keiAtk*1.2, furDef) + damage;
         showDamage(damagePlus);
       }
     }

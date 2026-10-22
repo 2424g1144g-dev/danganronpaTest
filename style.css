@@ -583,7 +583,7 @@ body {
    2. 地面の着地衝撃（楕円）
    ============================================== */
 .slash-effect.active .impact-ground {
-  position: relative;
+  position: absolute;
   bottom: 40px;
   left: 50%;
   width: 140px;
@@ -615,7 +615,7 @@ body {
    3. 上昇バースト（縦方向の光）
    ============================================== */
 .slash-effect.active .impact-burst {
-  position: relative;
+  position: absolute;
   bottom: 50px;
   left: 50%;
   width: 40px;

@@ -111,9 +111,11 @@ addEventListener("keydown", async (event) => {
         console.log("塚越の通常こうげき");
       } else if (attacker.id === "keizo-icon") {
         window.playSlashEffect();
-        await sleep(350);
         damage = window.damageValue(keiAtk, furDef);
         showDamage(damage);
+        await sleep(350);
+        damagePlus = window.damageValue(keiAtk, furDef) + damage;
+        showDamage(damagePlus);
       }
     }
 })

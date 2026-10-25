@@ -102,6 +102,7 @@ addEventListener("keydown", async (event) => {
     const attacker = turnOrder[currentActionIndex];
     const slashEffect = document.getElementById("slash-effect");
     if (event.key === "s") {
+      if (e.repeat) return;
       currentState = "attack";
       moon.classList.remove("show");
       command.classList.remove("show");

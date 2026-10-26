@@ -130,7 +130,7 @@ addEventListener("keydown", async (event) => {
         showDamage(damagePlus);
         window.damageEnemy(damagePlus);
       }
-      await sleep(800);
+      await sleep(1300);
       currentActionIndex++;
       executeNextAction();
     }

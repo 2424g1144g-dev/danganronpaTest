@@ -3,7 +3,7 @@ let ryuHp = 269, ryuMaxHp = 269, ryuSp = 147, ryuMaxSp = 147, ryuAtk = 106, ryuD
 let keiHp = 308, keiMaxHp = 308, keiSp = 124, keiMaxSp = 124, keiAtk = 130, keiDef = 102,keiSpd = 39, keiDodge = 6, keiLuck = 9,  keiResist = 50, keiSucceed = 50;
 let furHp = 10000, furDef = 37;
 
-let enemies = [
+let enemiesStatus = [
     { name: "FakeFuruichi", hp: 10000, maxHp: 10000 }
 ]
 
@@ -71,7 +71,7 @@ window.updateCharacterSp = function(characterId, currentSp) {
 
 window.damageEnemy = function(damage) {
     // 選択されている敵のデータを取得
-    let targetEnemy = enemies[currentEnemyIndex];
+    let targetEnemy = enemiesStatus[currentEnemyIndex];
     if (!targetEnemy) {
         console.error("攻撃対象の敵データが見つかりません。Index:", currentEnemyIndex);
         return;

@@ -3,7 +3,7 @@ let ryuHp = 269, ryuMaxHp = 269, ryuSp = 147, ryuMaxSp = 147, ryuAtk = 106, ryuD
 let keiHp = 308, keiMaxHp = 308, keiSp = 124, keiMaxSp = 124, keiAtk = 130, keiDef = 102,keiSpd = 39, keiDodge = 6, keiLuck = 9,  keiResist = 50, keiSucceed = 50;
 let furHp = 10000, furDef = 37;
 
-enemies = [
+let enemies = [
     { name: "FakeFuruichi", hp: 10000, maxHp: 10000 }
 ]
 

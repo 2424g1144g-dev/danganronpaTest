@@ -4,7 +4,7 @@ let keiHp = 308, keiMaxHp = 308, keiSp = 124, keiMaxSp = 124, keiAtk = 130, keiD
 let furHp = 10000, furDef = 37;
 
 enemies = [
-    { name: "FakeFuruichi", hp: 10000, maxHp: 10000 },
+    { name: "FakeFuruichi", hp: 10000, maxHp: 10000 }
 ]
 
 /**

@@ -449,7 +449,22 @@ body {
     rotate: -11deg;
     transform: skew(60deg, 7deg);
 }
-
+#skill-name {
+    display: flex;
+    position: relative;
+    left: 50px;
+    top: 50px;
+    width: 300px;
+    height: 40px;
+    background: #0FD0E2;
+    border-radius: 20px;
+    z-index: 1;
+    font-family: "neko";
+    font-size: 20px;
+    color: white;
+    justify-content: center;
+    align-content: center;
+}
 
 
 

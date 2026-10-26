@@ -134,6 +134,11 @@ addEventListener("keydown", async (event) => {
       currentActionIndex++;
       executeNextAction();
     }
+
+    if (event.key === "w") {
+        if(event.repeat) return;
+        const 
+    }
 })
 
 startTurn();

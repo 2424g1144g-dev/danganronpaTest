@@ -452,18 +452,29 @@ body {
 #skill-name {
     display: flex;
     position: relative;
-    left: 50px;
+    left: 120px;
     top: 50px;
     width: 300px;
     height: 40px;
     background: #0FD0E2;
-    border-radius: 20px;
+    border-radius: 10px;
     z-index: 1;
     font-family: "neko";
     font-size: 20px;
     color: white;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+}
+#skill-name ::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 30px;;
+    width: 400px;
+    height: 50px;
+    transform: skewX(10deg);
+    background: #0165D7;
+    z-index:-1;
 }
 
 

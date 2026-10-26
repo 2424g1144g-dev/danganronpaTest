@@ -2,7 +2,7 @@ function getActionOrder() {
     const characters = [
         { name: "Mitsuhiro", id: "mitsuhiro-icon", spd: mitSpd, hp: mitHp },
         { name: "Ryuji", id: "ryuji-icon", spd: ryuSpd, hp: ryuHp },
-        { name: "Keizo", id: "keizo-icon", spd: keiSpd, hp: keiHp }
+        { name: "Keizo", id: "keizo-icon", spd: keiSpd, hp: keiHp },
         { name: "furuichi", id: "furuichi", spd: 30, hp: furHp }
         // ここに敵（Enemy）のデータも同じように追加できます
     ];

@@ -1,7 +1,7 @@
 let mitHp = 327, mitMaxHp = 327, mitSp = 115, mitMaxSp = 115, mitAtk = 122, mitDef = 99, mitSpd = 34, mitDodge = 7, mitLuck = 10, mitResist = 50, mitSucceed = 50;
 let ryuHp = 269, ryuMaxHp = 269, ryuSp = 147, ryuMaxSp = 147, ryuAtk = 106, ryuDef = 113,ryuSpd = 30, ryuDodge = 5, ryuLuck = 12, ryuResist = 50, ryuSucceed = 50;
 let keiHp = 308, keiMaxHp = 308, keiSp = 124, keiMaxSp = 124, keiAtk = 130, keiDef = 102,keiSpd = 39, keiDodge = 6, keiLuck = 9,  keiResist = 50, keiSucceed = 50;
-let furDef = 37;
+let furHp = 10000, furDef = 37;
 
 /**
  * キャラクターのHP表示を更新する関数
@@ -64,6 +64,31 @@ window.updateCharacterSp = function(characterId, currentSp) {
         el10.classList.remove('is-gray');
     }
 }
+
+window.damageEnemy = function(damage) {
+    // 選択されている敵のデータを取得
+    let targetEnemy = enemies[currentEnemyIndex];
+    if (!targetEnemy) {
+        console.error("攻撃対象の敵データが見つかりません。Index:", currentEnemyIndex);
+        return;
+    }
+    targetEnemy.hp -= damage;
+    if (targetEnemy.hp < 0) {
+        targetEnemy.hp = 0;
+    }
+    // --- ここからHTML（HPバー）の更新処理 ---
+    // 現在のHPの割合（%）を計算する
+    let hpPercentage = (targetEnemy.hp / targetEnemy.maxHp) * 100;
+    // ※将来的に画面に敵が複数並ぶ場合は、document.querySelectorAll('.enemy-hp-fill')[currentEnemyIndex] などの形に変更
+    let hpBarFill = document.getElementById("enemy-hp-fill");
+    if (hpBarFill) {
+        // styleのwidthを計算したパーセンテージに書き換える (例: "75%")
+        hpBarFill.style.width = hpPercentage + "%";
+    }
+    // コンソールで確認用
+    console.log(`${targetEnemy.name}に ${damage} ダメージ！ 残りHP: ${targetEnemy.hp} / ${targetEnemy.maxHp} (${hpPercentage.toFixed(1)}%)`);
+}
+
 
 // === 使い方（テスト用） ===
 // ダメージを食らって「mitsuhiro」のHPが 45 になった場合、以下のように呼び出します。

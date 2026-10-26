@@ -3,6 +3,7 @@ function getActionOrder() {
         { name: "Mitsuhiro", id: "mitsuhiro-icon", spd: mitSpd, hp: mitHp },
         { name: "Ryuji", id: "ryuji-icon", spd: ryuSpd, hp: ryuHp },
         { name: "Keizo", id: "keizo-icon", spd: keiSpd, hp: keiHp }
+        { name: "furuichi", id: "furuichi", spd: 30, hp: furHp }
         // ここに敵（Enemy）のデータも同じように追加できます
     ];
     const aliveCharacters = characters.filter(char => char.hp > 0);
@@ -114,11 +115,13 @@ addEventListener("keydown", async (event) => {
         await sleep(200);
         damage = window.damageValue(mitAtk*2.2, furDef);
         showDamage(damage);
+        window.damageEnemy(damage);
       } else if (attacker.id === "ryuji-icon") {
         window.volleyballEffect();
         await sleep(200);
         damage = window.damageValue(ryuAtk*2, furDef)
         showDamage(damage);
+        window.damageEnemy(damage);
       } else if (attacker.id === "keizo-icon") {
         window.playSlashEffect();
         damage = window.damageValue(keiAtk*0.8, furDef);
@@ -126,6 +129,7 @@ addEventListener("keydown", async (event) => {
         await sleep(350);
         damagePlus = window.damageValue(keiAtk*1.2, furDef) + damage;
         showDamage(damagePlus);
+        window.damageEnemy(damagePlus);
       }
       await sleep(800);
       currentActionIndex++;

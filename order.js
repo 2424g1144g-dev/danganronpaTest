@@ -137,7 +137,6 @@ addEventListener("keydown", async (event) => {
 
     if (event.key === "w") {
         if(event.repeat) return;
-        const 
     }
 })
 

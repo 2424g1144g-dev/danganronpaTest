@@ -433,9 +433,13 @@ body {
     z-index: 1;
     font-family: "neko";
     font-size: 20px;
+    opacity: 0;
     color: white;
     justify-content: center;
     align-items: center;
+}
+#enemy-name.selected {
+    opacity: 1;
 }
 #enemy-name::before {
     content: "";

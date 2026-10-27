@@ -468,6 +468,7 @@ body {
     color: white;
     justify-content: center;
     align-items: center;
+    opacity: 0;
 }
 #skill-name::before {
     content: "";
@@ -481,6 +482,9 @@ body {
     background: #0165D7;
     z-index: -1;
     mix-blend-mode: multiply;
+}
+#skill-name.show {
+    opacity: 1;
 }
 
 

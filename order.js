@@ -80,6 +80,7 @@ const moon = document.getElementById("moon-joint");
 const command = document.getElementById("command-parent");
 const img = document.getElementById("command-img");
 const enemyName = document.getElementById("enemy-name");
+const skillName = document.getElementById("skill-name");
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 function showCommandMenu(attacker) {
     moon.classList.add("show");
@@ -109,6 +110,7 @@ addEventListener("keydown", async (event) => {
       command.classList.remove("show");
       img.classList.remove("show");
       enemyName.classList.remove("show");
+      skillName.classList.add("show");
       const enemyReticle = document.querySelector(".enemy.selected");
       enemyReticle.classList.remove("selected");
       if (attacker.id === "mitsuhiro-icon") {
@@ -133,6 +135,7 @@ addEventListener("keydown", async (event) => {
         window.damageEnemy(damagePlus);
       }
       await sleep(1300);
+      skillName.classList.remove("show");
       currentActionIndex++;
       executeNextAction();
     }

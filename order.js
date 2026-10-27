@@ -110,22 +110,24 @@ addEventListener("keydown", async (event) => {
       command.classList.remove("show");
       img.classList.remove("show");
       enemyName.classList.remove("show");
-      skillName.classList.add("show");
       const enemyReticle = document.querySelector(".enemy.selected");
       enemyReticle.classList.remove("selected");
       if (attacker.id === "mitsuhiro-icon") {
+        skill("みぞおちパンチ");
         window.playStampEffect();
         await sleep(200);
         damage = window.damageValue(mitAtk*2.2, furDef);
         showDamage(damage);
         window.damageEnemy(damage);
       } else if (attacker.id === "ryuji-icon") {
+        skill("バレーボールアタック")
         window.volleyballEffect();
         await sleep(200);
         damage = window.damageValue(ryuAtk*2, furDef)
         showDamage(damage);
         window.damageEnemy(damage);
       } else if (attacker.id === "keizo-icon") {
+        skill("通常攻撃");
         window.playSlashEffect();
         damage = window.damageValue(keiAtk*0.8, furDef);
         showDamage(damage);

@@ -35,6 +35,10 @@ window.addEventListener("keydown", (event) => {
     }
   }
 });
+function skill(data) {
+  skillName.textContent = data;
+  skillName.classList.add("show");
+}
 function updateSelectedEnemyCSS() {
   const enemyElements = document.querySelectorAll('.enemy');
   enemyElements.forEach((enemyElement, index) => {

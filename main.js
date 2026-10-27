@@ -47,7 +47,7 @@ function updateSelectedEnemyCSS() {
   const nameDisplay = document.getElementById('enemy-name');
   if (nameDisplay && enemies[currentEnemyIndex]) {
     nameDisplay.textContent = enemies[currentEnemyIndex];
-    enemyName.classList.add("show");
+    nameDisplay.classList.add("show");
   }
 }
 updateSelectedEnemyCSS();

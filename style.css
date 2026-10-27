@@ -438,7 +438,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-#enemy-name.selected {
+#enemy-name.show {
     opacity: 1;
 }
 #enemy-name::before {

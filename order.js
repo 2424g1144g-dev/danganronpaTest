@@ -108,6 +108,7 @@ addEventListener("keydown", async (event) => {
       moon.classList.remove("show");
       command.classList.remove("show");
       img.classList.remove("show");
+      enemyName.classList.remove("show");
       const enemyReticle = document.querySelector(".enemy.selected");
       enemyReticle.classList.remove("selected");
       if (attacker.id === "mitsuhiro-icon") {

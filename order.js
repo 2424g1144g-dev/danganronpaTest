@@ -79,7 +79,7 @@ function executeNextAction() {
 const moon = document.getElementById("moon-joint");
 const command = document.getElementById("command-parent");
 const img = document.getElementById("command-img");
-const enemyName = document.getElementById("skill-name");
+const enemyName = document.getElementById("enemy-name");
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 function showCommandMenu(attacker) {
     moon.classList.add("show");

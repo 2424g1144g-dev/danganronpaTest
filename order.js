@@ -144,6 +144,9 @@ addEventListener("keydown", async (event) => {
 
     if (event.key === "w") {
         if(event.repeat) return;
+        if (attacker.id === "mitsuhiro-icon") {
+            
+        }
     }
 })
 

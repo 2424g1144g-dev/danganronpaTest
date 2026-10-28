@@ -490,13 +490,21 @@ body {
 
 #skillImg-BG {
     position: absolute;
-    left: 200px;
-    top: 0;
-    width: 130px;
-    height: 110vh;
+    left: 100px;
+    top: 50px;
+    width: 400px;
+    height: 100vh;
     background: #0D38FE;
     z-index: 2000;
-    rotate: -10deg;
+    rotate: 45deg;
+}
+#skillImg {
+    position: absolute;
+    left: -50px;
+    bottom: -200px;
+    width: 700px;
+    rotate: 10deg;
+    z-index: 2300;
 }
 
 

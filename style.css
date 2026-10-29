@@ -500,10 +500,10 @@ body {
 }
 #skillImg {
     position: absolute;
-    left: -50px;
-    bottom: -200px;
-    width: 700px;
-    rotate: 10deg;
+    left: -450px;
+    bottom: -400px;
+    width: 1200px;
+    rotate: 20deg;
     z-index: 2300;
 }
 

@@ -506,6 +506,17 @@ body {
     rotate: 20deg;
     z-index: 2300;
 }
+#skillPersona-under {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 600px;
+    height: 70px;
+    background: #0984eb42;
+    border-radius: 10px;
+    z-index: 2900; 
+    filter: blur(3px);
+}
 #skillPersona {
     position: absolute;
     left: -10px;
@@ -529,6 +540,18 @@ body {
     z-index: 3500;
     rotate: 7deg;
     transform: skewX(-20deg);
+}
+#skillPersona::after {
+    content: "";
+    position: relative;
+    display: block;
+    left: 500px;
+    top: -110px;
+    width: 100px;
+    height: 70px;
+    filter: brightness(1.5);
+    background: #0984EB;
+    z-index: 3250;
 }
 
 

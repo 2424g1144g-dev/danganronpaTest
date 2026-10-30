@@ -508,14 +508,14 @@ body {
 }
 #skillPersona-under {
     position: absolute;
-    left: 0;
-    top: 20px;
-    width: 600px;
+    left: -10px;
+    top: 37px;
+    width: 605px;
     height: 70px;
-    background: #0984eb42;
+    background: #0984eb8a;
     border-radius: 10px;
     z-index: 2900; 
-    filter: blur(3px);
+    filter: blur(1px) brightness(1.3);
 }
 #skillPersona {
     position: absolute;

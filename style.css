@@ -515,6 +515,7 @@ body {
     background: #0984EB;
     border-radius: 10px;
     z-index: 3000;
+    overflow: hidden;
 }
 #skillPersona::before {
     content: "";

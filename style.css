@@ -531,6 +531,11 @@ body {
     font-size: 24px;
     text-align: center;
 }
+#skillPersona .persona-text {
+    position: relative;
+    z-index: 5000; /* 擬似要素の 3500 より高くする */
+    color: #000; /* 必要に応じて文字色を調整してください */
+}
 #skillPersona::before {
     content: "";
     display: block;

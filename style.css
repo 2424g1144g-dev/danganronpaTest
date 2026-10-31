@@ -565,6 +565,7 @@ body {
     z-index: 3250;
 }
 .skill-menu {
+    position: absolute;
     display: flex;
     flex-direction: column; 
     gap: 8px;               
@@ -573,6 +574,7 @@ body {
     padding: 15px;
     border: 4px double #fff; 
     outline: none; /* キーボードフォーカス時の青い枠線を消す */
+    z-index: 10000;
   }
   /* 通常時のスキル項目 */
 .skill-item {

@@ -588,7 +588,7 @@ body {
 }
 /* ★ キーボードの矢印キーで選択されている時のCSS */
 .skill-item.selected {
-    color: #000;
+    color: #0E182F;
     background-color: #fff;
     box-shadow: 0 5px 0 rgb(255 0 252 / 70%);
     border-radius: 4px;

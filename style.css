@@ -599,6 +599,7 @@ body {
     width: 60px;
     text-align: center;
     background: #0E182F;
+    transform: skewX(-10deg);
 }
 
 

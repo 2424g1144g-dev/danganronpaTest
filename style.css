@@ -567,27 +567,30 @@ body {
 .skill-menu {
     position: absolute;
     display: flex;
-    flex-direction: column; 
-    gap: 8px;               
-    width: 250px;
-    background-color: #000; 
+    left: 400px;
+    top: 130px;
+    flex-direction: column;
+    gap: 0;
+    width: 400px;
     padding: 15px;
-    border: 4px double #fff; 
-    outline: none; /* キーボードフォーカス時の青い枠線を消す */
+    outline: none;
     z-index: 10000;
-  }
+    font-family: "neko";
+    font-size: 30px;
+}
   /* 通常時のスキル項目 */
 .skill-item {
-  color: #fff;
-  font-family: monospace;  
-  font-size: 18px;
-  padding: 8px 12px;
+    color: #23E8FF;
+    font-family: "neko";
+    font-style: italic;
+    font-size: 18px;
+    padding: 8px 12px;
 }
 /* ★ キーボードの矢印キーで選択されている時のCSS */
 .skill-item.selected {
-  color: #000;
-  background-color: #fff;  /* 白黒反転させてファミコン風に強調 */
-  font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 5px 0 rgb(255 0 252 / 70%);
 }
 
 

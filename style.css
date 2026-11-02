@@ -583,8 +583,8 @@ body {
     color: #23E8FF;
     font-family: "neko";
     font-style: italic;
-    font-size: 20px;
-    padding: 8px 12px;
+    font-size: 22px;
+    padding: 2px 12px;
 }
 /* ★ キーボードの矢印キーで選択されている時のCSS */
 .skill-item.selected {

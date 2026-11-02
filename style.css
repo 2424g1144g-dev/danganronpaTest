@@ -593,6 +593,13 @@ body {
     box-shadow: 0 5px 0 rgb(255 0 252 / 70%);
     border-radius: 4px;
 }
+.skill-icon {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    text-align: center;
+    background: #0E182F;
+}
 
 
 

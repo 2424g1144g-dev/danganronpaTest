@@ -671,6 +671,21 @@ body {
     font-size: 14px;
 }
 
+#skill-info-persona {
+    position: absolute;
+    width: max-content;
+    height: 500px;
+    font-family: "alphabetUI";
+    font-size: 600px;
+    color: black;
+    rotate: 10deg;
+    font-weight: bold;
+    border: 5px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
 
 
 

@@ -72,14 +72,25 @@ window.addEventListener('DOMContentLoaded', () => {
 // 選択状態の見た目（CSSクラス）を更新する関数
 function updateSelection() {
   items.forEach((item, index) => {
-    if (index === currentIndex) {
+    if (index === currentIndex) { 
       item.classList.add('selected'); // 選択中にCSSを変化
+      //if (skillInfoContainer && tsukagoeSkill[index]) {
+        //skillInfoContainer.innerHTML = tsukagoeSkill[index];
+      //}
     } else {
       item.classList.remove('selected');
     }
   });
 }
 
+let tsukagoeSkill = [
+  "敵１体に物理属性で<br>小ダメージを与え、<br>「実験」を２つ獲得する",
+  "敵全体に毒状態を<br>中確率で付与する",
+  "敵全体の攻撃力と防御力を下げ、<br>「実験」を１つ消費しバフ効果を１つ打ち消す",
+  "敵単体に氷属性で中ダメージを与え、<br>「実験」の所持数×１０％防御力を下げる",
+  "敵単体に炎属性で中ダメージを与える、実験の所持数により以下の効果が発生する<br>[1]「実験」が１〜３つの場合、相手を中確率で燃焼状態にする<br>[2]「実験」が４〜５つの場合、対象の全ステータスを低下させる<br>[3]「実験が６つ以上の場合、味方全体の体力を使用者の攻撃力に基づいた数値だけ回復する",
+  "自身のクリティカル率を１５％上昇させ、<br>ＳＰを中回復する"
+]
 // キーボードの入力を監視するイベント
 menu.addEventListener('keydown', (e) => {
   // 矢印キーが押されたときに、画面が勝手に上下にスクロールするのを防ぐ

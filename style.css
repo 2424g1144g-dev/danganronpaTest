@@ -690,6 +690,10 @@ body {
     z-index: 2300;
     letter-spacing: -40px;
 }
+#skill-info {
+    position: absolute;
+    font-family: "neko";
+}
 
 
 

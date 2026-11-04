@@ -662,6 +662,14 @@ body {
     left: 60px;
     z-index: 2; 
 }
+.waste.HP {
+    position: relative;
+    left: -20px;
+    font-family: "UI";
+    color: black;
+    z-index: 3;
+    font-size: 14px;
+}
 
 
 

@@ -39,7 +39,7 @@ body {
 .icon {
     position: absolute;
     right: 130px;
-    z-index: 300;
+    z-index: 3000;
 }
 .icon-src {
     clip-path: polygon(0px 0px, 150px 0px, 110px 100px, 35px 140px);
@@ -673,17 +673,22 @@ body {
 
 #skill-info-persona {
     position: absolute;
-    width: max-content;
-    height: 500px;
+    left: 30px;
+    top: 280px;
+    width: 1500px;
+    height: 230px;
     font-family: "alphabetUI";
-    font-size: 600px;
+    font-size: 250px;
     color: black;
-    rotate: 10deg;
+    rotate: -10deg;
+    scale: 1.1;
     font-weight: bold;
-    border: 5px solid black;
+    border: 10px solid black;
     border-top: none;
     border-left: none;
     border-right: none;
+    z-index: 2300;
+    letter-spacing: -40px;
 }
 
 

@@ -612,6 +612,9 @@ body {
     overflow: hidden;
     z-index: 1;
 }
+.skill-item.selected.usage.SP {
+    color: #FADB0E;
+}
 .usage.SP::before {
     content: "";
     position: absolute;

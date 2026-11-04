@@ -648,10 +648,10 @@ body {
     overflow: hidden;
     z-index: 1;
 }
-.skill-item.selected .usage.SP {
+.skill-item.selected .usage.HP {
     color: #19F9FA;
 }
-.usage.SP::before {
+.usage.HP::before {
     content: "";
     position: absolute;
     background: #19F9FA;

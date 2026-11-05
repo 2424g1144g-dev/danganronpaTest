@@ -690,10 +690,62 @@ body {
     z-index: 2300;
     letter-spacing: -40px;
 }
+#skill-info-persona {
+    position: absolute;
+    left: 30px;
+    top: 280px;
+    width: 1500px;
+    height: 230px;
+    font-family: "alphabetUI";
+    font-size: 250px;
+    color: black;
+    rotate: -10deg;
+    scale: 1.1;
+    font-weight: 1000;
+    border: 10px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    z-index: 2300;
+    letter-spacing: -40px;
+}
 #skill-info {
     position: absolute;
+    display: flex;
+    width: 500px;
+    height: 200px;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    top: 370px;
+    left: 420px;
+    color: #23E8FF;
     font-family: "neko";
+    font-size: 20px;
+    z-index: 3000;
+    
+    /* 元の border-radius や background はここから削除します */
 }
+
+/* ★背景のシャドウ丸を専用に作る */
+#skill-info::before {
+    content: "";
+    position: absolute;
+    /* 親要素（500x200）より一回り大きくして、文字の後ろ全体を包み込む */
+    top: 0;
+    left: -50px;
+    right: -50px;
+    bottom: 0;
+    
+    border-radius: 50%;
+    /* 単色背景の代わりに「外側に向けてじわっと消える影」を配置 */
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 75%);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    filter: blur(20px);
+    z-index: -1; /* ★文字（親要素の中身）の後ろに回り込ませる */
+    pointer-events: none; /* マウスイベントを透過させる（クリックの邪魔をしない） */
+}
+
 
 
 

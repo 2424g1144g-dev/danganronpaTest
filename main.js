@@ -74,15 +74,16 @@ function updateSelection() {
   items.forEach((item, index) => {
     if (index === currentIndex) { 
       item.classList.add('selected'); // 選択中にCSSを変化
-      //if (skillInfoContainer && tsukagoeSkill[index]) {
-        //skillInfoContainer.innerHTML = tsukagoeSkill[index];
-      //}
+      if (skillInfoContainer && tsukagoeSkill[index]) {
+        skillInfoContainer.innerHTML = tsukagoeSkill[index];
+      }
     } else {
       item.classList.remove('selected');
     }
   });
 }
 
+const skillInfoContainer = document.getElementById('skill-info');
 let tsukagoeSkill = [
   "敵１体に物理属性で<br>小ダメージを与え、<br>「実験」を２つ獲得する",
   "敵全体に毒状態を<br>中確率で付与する",

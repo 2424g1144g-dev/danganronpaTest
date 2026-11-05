@@ -145,8 +145,10 @@ addEventListener("keydown", async (event) => {
     if (event.key === "w") {
         if(event.repeat) return;
         if (attacker.id === "mitsuhiro-icon") {
-            
+            const skillContainer =  document.getElementbById("tsukagoe-skill-container");
+            const skillImgContainer = document.getElementById("skill-img-container");
         }
+        skillContainer.classList.add("show");
     }
 })
 

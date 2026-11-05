@@ -715,10 +715,8 @@ body {
     width: 500px;
     height: 200px;
     text-align: left;
-    align-items: center;
-    justify-content: center;
-    top: 370px;
-    left: 420px;
+    top: 420px;
+    left: 450px;
     color: #23E8FF;
     font-family: "neko";
     font-size: 20px;
@@ -732,8 +730,8 @@ body {
     content: "";
     position: absolute;
     /* 親要素（500x200）より一回り大きくして、文字の後ろ全体を包み込む */
-    top: 0;
-    left: -50px;
+    top: -50px;
+    left: -100px;
     right: -50px;
     bottom: 0;
     
@@ -745,7 +743,6 @@ body {
     z-index: -1; /* ★文字（親要素の中身）の後ろに回り込ませる */
     pointer-events: none; /* マウスイベントを透過させる（クリックの邪魔をしない） */
 }
-
 
 
 

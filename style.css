@@ -512,10 +512,12 @@ body {
     z-index: 2300;
 }
 #persona-name-container {
-    transform: translateX(-200px);
+    position: abssolute;
+    left: -200px;
+    transform: left 0.3s ease-out;
 }
 #skill-container.show #persona-name-container {
-    transform: translateX(0);
+    left: 0;
 }
 #skillPersona-under {
     position: absolute;

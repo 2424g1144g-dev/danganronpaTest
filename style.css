@@ -529,6 +529,11 @@ body {
     width: 1200px;
     rotate: 20deg;
     z-index: 2300;
+    transform: translateX(-500px);
+    transition: transform 0.3s ease-out;
+}
+#skill-container.show #skillImg {
+    transform: translateX(0);
 }
 #persona-name-container {
     position: absolute;

@@ -512,14 +512,15 @@ body {
     border-radius: 50%;
     background: transparent;
     border: 10px solid #0FD0E2;
+    opacity: 0;
 }
 #skill-container.show #skillImg-BG::before {
     animation: circleExpand 0.6s linear forwards;
 }
 @keyframes circleExpand {
     0% {scale: 1.0}
-    80% {scale: 2.6}
-    100% {scale: 2.8; border: 0.1px solid #0FD0E2}
+    80% {scale: 3.4}
+    100% {scale: 4; border: 0.1px solid #0FD0E2; opacity: 0}
 }
 #skillImg {
     position: absolute;

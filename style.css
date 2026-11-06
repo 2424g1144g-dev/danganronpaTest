@@ -518,7 +518,7 @@ body {
     animation: circleExpand 0.6s linear forwards;
 }
 @keyframes circleExpand {
-    0% {scale: 1.0}
+    0% {scale: 1.0; opacity: 1;}
     80% {scale: 3.4}
     100% {scale: 4; border: 0.1px solid #0FD0E2; opacity: 0}
 }

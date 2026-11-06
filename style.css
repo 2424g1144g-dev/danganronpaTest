@@ -577,6 +577,13 @@ body {
     z-index: 10000;
     font-family: "neko";
     font-size: 30px;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: opacity 0.3s linear, transform 0.3s ease-out;
+}
+#skill-container.show .skill-menu {
+    transform: translateX(0);
+    opacity: 1;
 }
   /* 通常時のスキル項目 */
 .skill-item {

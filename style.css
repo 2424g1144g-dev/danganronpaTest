@@ -509,13 +509,17 @@ body {
     position: absolute;
     width: 300px;
     height: 300px;
+    border-radius: 50%;
     background: transparent;
-    border: 15px solid #0FD0E2;
-    transition: width 0.5s ease-out, height 0.5s ease-out;
+    border: 10px solid #0FD0E2;
 }
 #skill-container.show #skillImg-BG::before {
-    width: 1000px;
-    height: 1000px;
+    animation: circleExpand 0.6s linear;
+}
+@keyframes circleExpand {
+    0% {width: 0; height: 0;}
+    80% {width: 800px; height: 800px;}
+    100% {width: 900px; height: 900px; border: 1px solid #0FD0E2}
 }
 #skillImg {
     position: absolute;

@@ -512,9 +512,10 @@ body {
     z-index: 2300;
 }
 #persona-name-container {
-    position: abssolute;
-    left: -200px;
-    transform: left 0.3s ease-out;
+    position: absolute;
+    left: -600px;
+    top: 0;
+    transition: left 0.3s ease-out;
 }
 #skill-container.show #persona-name-container {
     left: 0;

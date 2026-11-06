@@ -497,6 +497,11 @@ body {
     background: #0D38FE;
     z-index: 2000;
     rotate: 45deg;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+    transition: clip-path 0.3s ease-out;
+}
+#skill-container.show #skillImg-BG{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 #skillImg {
     position: absolute;

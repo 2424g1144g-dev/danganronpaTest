@@ -499,9 +499,23 @@ body {
     rotate: 225deg;
     clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
     transition: clip-path 0.3s ease-out;
+    overflow: hidden;
 }
 #skill-container.show #skillImg-BG{
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+#skillImg-BG::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: transparent;
+    border: 15px solid #0FD0E2;
+    transition: width 0.5s ease-out, height 0.5s ease-out;
+}
+#skill-container.show #skillImg-BG::before {
+    width: 1000px;
+    height: 1000px;
 }
 #skillImg {
     position: absolute;

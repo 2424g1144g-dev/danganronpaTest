@@ -158,6 +158,7 @@ addEventListener("keydown", (event) => {
     if (currentState != "skill") return;
     if (event.key === "Escape") {
         if (attacker.id === "mitsuhiro-icon") {
+            const attacker = turnOrder[currentActionIndex];
             const skillContainer = document.getElementById("skill-container");
             const tsukagoeSkill = document.getElementById("tsukagoe-skill-container");
             skillContainer.classList.remove("show");

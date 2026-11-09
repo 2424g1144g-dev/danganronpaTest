@@ -156,12 +156,14 @@ addEventListener("keydown", async (event) => {
 
 addEventListener("keydown", (event) => {
     if ("currentState" !== "skill") return;
-    if (attacker.id === "mitsuhiro-icon") {
-        const skillContainer = document.getElementById("skill-container");
-        const tsukagoeSkill = document.getElementById("tsukagoe-skill-container");
-        skillContainer.classList.remove("show");
-        tsukagoeSkill.classList.remove("show");
-        currentState = "command";
+    if (event.key === "esc") {
+        if (attacker.id === "mitsuhiro-icon") {
+            const skillContainer = document.getElementById("skill-container");
+            const tsukagoeSkill = document.getElementById("tsukagoe-skill-container");
+            skillContainer.classList.remove("show");
+            tsukagoeSkill.classList.remove("show");
+            currentState = "command";
+        }
     }
 })
 

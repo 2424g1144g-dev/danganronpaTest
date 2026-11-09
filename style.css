@@ -734,6 +734,11 @@ body {
     border-right: none;
     z-index: 2300;
     letter-spacing: -40px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+#skill-container.show #skill-info-persona {
+    opacity: 1;
 }
 #skill-info-persona {
     position: absolute;
@@ -766,8 +771,12 @@ body {
     font-family: "neko";
     font-size: 20px;
     z-index: 3000;
-    
+    opacity: 0;
+    transition: oopacity 0.3s ease-out;
     /* 元の border-radius や background はここから削除します */
+}
+#skill-container {
+    opacity: 1;
 }
 
 /* ★背景のシャドウ丸を専用に作る */

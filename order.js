@@ -155,8 +155,8 @@ addEventListener("keydown", async (event) => {
 })
 
 addEventListener("keydown", (event) => {
-    if ("currentState" !== "skill") return;
-    if (event.key === "Esc") {
+    if ("currentState" != "skill") return;
+    if (event.key === "q") {
         if (attacker.id === "mitsuhiro-icon") {
             const skillContainer = document.getElementById("skill-container");
             const tsukagoeSkill = document.getElementById("tsukagoe-skill-container");

@@ -162,6 +162,7 @@ addEventListener("keydown", (event) => {
         skillContainer.classList.remove("show");
         tsukagoeSkill.classList.remove("show");
         currentState = "command";
+    }
 })
 
 startTurn();

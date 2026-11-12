@@ -150,6 +150,7 @@ addEventListener("keydown", async (event) => {
             skillContainer.classList.add("show");
             tsukagoeSkill.classList.add("show");
             currentState = "skill";
+            tsukagoeSkill[currentIndex];
         }
     }
 })

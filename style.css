@@ -775,7 +775,7 @@ body {
     transition: oopacity 0.3s ease-out;
     /* 元の border-radius や background はここから削除します */
 }
-#skill-container {
+#skill-container.show #skill-info {
     opacity: 1;
 }
 
